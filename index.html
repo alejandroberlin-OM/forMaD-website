@@ -180,6 +180,45 @@
       font-size: 11px; font-weight: 600;
     }
 
+    .fp-example {
+      display: inline-block; margin-right: 9px;
+      background: rgba(255,107,107,0.14); border: 1px solid rgba(255,107,107,0.32);
+      color: var(--coral); padding: 2px 8px; border-radius: 5px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+    }
+
+    .fp-caption {
+      margin-top: 20px; text-align: center; font-size: 14px; color: var(--muted);
+    }
+    .fp-caption a { color: var(--coral); text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(255,107,107,0.4); }
+    .fp-caption a:hover { border-bottom-color: var(--coral); }
+
+    /* Rolling form-examples ticker */
+    .ticker {
+      margin-top: 40px; width: 100%; max-width: 100vw; overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    }
+    .ticker-track {
+      display: inline-flex; gap: 12px; white-space: nowrap;
+      animation: tickerScroll 48s linear infinite;
+      will-change: transform;
+    }
+    .ticker:hover .ticker-track { animation-play-state: paused; }
+    .ticker-item {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 100px; padding: 9px 18px;
+      font-size: 13px; font-weight: 500; color: var(--off);
+    }
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track { animation: none; }
+    }
+
     .form-row { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
     .form-row:last-of-type { margin-bottom: 0; }
     .form-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
@@ -490,15 +529,15 @@
     .plan-price { margin-bottom: 8px; }
 
     .price-big {
-      font-size: 56px; font-weight: 700;
-      letter-spacing: -0.04em; line-height: 1;
+      font-size: 32px; font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.1;
     }
 
     .price-per { font-size: 16px; color: var(--muted); font-weight: 400; }
 
     .price-form {
-      font-size: 21px; font-weight: 600;
-      color: rgba(255,255,255,0.65); margin-bottom: 32px;
+      font-size: 16px; font-weight: 500;
+      color: rgba(255,255,255,0.65); margin-bottom: 32px; margin-top: 10px; line-height: 1.5;
     }
     .price-form strong { color: var(--white); }
 
@@ -760,7 +799,7 @@
 
   <div class="form-preview">
     <div class="form-preview-header">
-      <span>CBCRP Request Form · Ontario Health</span>
+      <span><span class="fp-example">Example</span>CBCRP Request Form · Ontario Health</span>
       <span class="fp-badge">✓ 36.2 sec</span>
     </div>
     <div class="form-row">
@@ -778,6 +817,45 @@
     <div class="form-row">
       <span class="form-label">Stopping Criteria</span>
       <span class="form-value v4">Progressive disease per RECIST 1.1 or Grade 3+ intolerable toxicity</span>
+    </div>
+  </div>
+
+  <p class="fp-caption">One example. forMaD covers 300+ forms across every specialty and insurer &mdash; <a href="#forms">see the library</a>.</p>
+
+  <!-- ROLLING FORM EXAMPLES -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item">CBCRP Drug Funding</span>
+      <span class="ticker-item">Ontario EAP</span>
+      <span class="ticker-item">NDFP Request</span>
+      <span class="ticker-item">Disability Tax Credit (T2201)</span>
+      <span class="ticker-item">CPP Disability</span>
+      <span class="ticker-item">ODSP Medical</span>
+      <span class="ticker-item">WSIB Form 8</span>
+      <span class="ticker-item">Driver Medical Report</span>
+      <span class="ticker-item">LTD / STD Reports</span>
+      <span class="ticker-item">Manulife Prior Auth</span>
+      <span class="ticker-item">Sun Life PA</span>
+      <span class="ticker-item">Green Shield Special Auth</span>
+      <span class="ticker-item">Compassionate Access Letter</span>
+      <span class="ticker-item">Critical Illness Claim</span>
+      <span class="ticker-item">Biologic Prior Authorization</span>
+      <!-- duplicate set for seamless loop -->
+      <span class="ticker-item">CBCRP Drug Funding</span>
+      <span class="ticker-item">Ontario EAP</span>
+      <span class="ticker-item">NDFP Request</span>
+      <span class="ticker-item">Disability Tax Credit (T2201)</span>
+      <span class="ticker-item">CPP Disability</span>
+      <span class="ticker-item">ODSP Medical</span>
+      <span class="ticker-item">WSIB Form 8</span>
+      <span class="ticker-item">Driver Medical Report</span>
+      <span class="ticker-item">LTD / STD Reports</span>
+      <span class="ticker-item">Manulife Prior Auth</span>
+      <span class="ticker-item">Sun Life PA</span>
+      <span class="ticker-item">Green Shield Special Auth</span>
+      <span class="ticker-item">Compassionate Access Letter</span>
+      <span class="ticker-item">Critical Illness Claim</span>
+      <span class="ticker-item">Biologic Prior Authorization</span>
     </div>
   </div>
 </section>
@@ -830,10 +908,10 @@
       <div class="step fu">
         <div class="step-n">Step 01</div>
         <div>
-          <div class="step-title">Select your profile</div>
+          <div class="step-title">Create your profile</div>
           <p class="step-desc">
-            Your credentials are stored once: name, CPSO number, hospital, contact details.
-            <strong>Every form auto-fills Section 1 from that moment forward.</strong>
+            Set up your profile once: name, CPSO number, hospital, contact details.
+            <strong>Every form auto-fills the physician's Section 1 from that moment forward.</strong>
             Group practices share a central provider directory so every physician in the group is always up to date.
           </p>
           <span class="step-pill">Provider directory shared across your group</span>
@@ -843,14 +921,14 @@
       <div class="step fu">
         <div class="step-n">Step 02</div>
         <div>
-          <div class="step-title">Name the drug. Paste your notes.</div>
+          <div class="step-title">Add context. Paste your notes.</div>
           <p class="step-desc">
-            Tell forMaD which drug you are requesting, then paste your clinical notes.
-            <strong>No patient name. No date of birth. No OHIP number.</strong>
-            Just the clinical story: diagnosis, staging, prior treatments, rationale.
-            forMaD knows which trial data to pull, which insurer criteria apply, and what makes this case compelling to reviewers.
+            Tell forMaD the key context and goal for the form in a few words, then paste your clinical notes.
+            <strong>No patient name. No date of birth. No health card number.</strong>
+            Just the clinical story: diagnosis, disease state, prior treatments, rationale.
+            forMaD knows which evidence to pull, which insurer criteria apply, and what makes this case compelling to reviewers.
           </p>
-          <span class="step-pill">Notes processed in a HIPAA/PHIPA-compliant environment</span>
+          <span class="step-pill">Notes processed in a PHI-secured environment</span>
         </div>
       </div>
 
@@ -887,14 +965,14 @@
             <div class="pillar-dot"></div>
             <div>
               <strong>De-identified by design</strong>
-              <span>You paste clinical context, not patient records. Diagnosis, staging, treatment history. That is all the AI ever sees.</span>
+              <span>You paste clinical context, not patient records. Diagnosis, disease state, treatment history. That is all the AI ever sees.</span>
             </div>
           </div>
           <div class="pillar">
             <div class="pillar-dot"></div>
             <div>
               <strong>Your data stays private</strong>
-              <span>Your notes are processed in a HIPAA and PHIPA-compliant environment. They are never used to train any AI model.</span>
+              <span>Your notes are processed in a PHI-secured environment, adhering to HIPAA and PHIPA standards. They are never used to train any AI model.</span>
             </div>
           </div>
           <div class="pillar">
@@ -921,17 +999,17 @@
             <h4>Stays with you</h4>
             <div class="phi-item stays">Patient name</div>
             <div class="phi-item stays">Date of birth</div>
-            <div class="phi-item stays">OHIP / OHIN</div>
+            <div class="phi-item stays">Health card number</div>
             <div class="phi-item stays">Home address</div>
             <div class="phi-item stays">Insurance ID</div>
             <div class="phi-item stays">Phone number</div>
           </div>
           <div class="phi-col ours">
             <h4>Powers the form</h4>
-            <div class="phi-item goes">Cancer diagnosis</div>
-            <div class="phi-item goes">Staging details</div>
+            <div class="phi-item goes">Diagnosis</div>
+            <div class="phi-item goes">Disease state</div>
             <div class="phi-item goes">Prior treatments</div>
-            <div class="phi-item goes">Drug requested</div>
+            <div class="phi-item goes">Treatment requested</div>
             <div class="phi-item goes">Clinical rationale</div>
             <div class="phi-item goes">Comorbidities</div>
           </div>
@@ -1019,23 +1097,21 @@
           No enterprise contract. No per-seat minimum. A small base fee, then pay only for what you use. Groups of any size are welcome.
         </p>
         <div class="roi">
-          <div class="roi-title">The math — 20 forms this month</div>
-          <div class="roi-row"><span class="lbl">forMaD subscription</span><span class="val">$8.99</span></div>
-          <div class="roi-row"><span class="lbl">20 forms × $0.89</span><span class="val">$17.80</span></div>
-          <div class="roi-row"><span class="lbl">Total monthly cost</span><span class="val coral">$26.79 CAD</span></div>
+          <div class="roi-title">The math — a typical month</div>
+          <div class="roi-row"><span class="lbl">Forms completed</span><span class="val">20</span></div>
           <div class="roi-row"><span class="lbl">Time saved (roughly 1 hr per form)</span><span class="val">20 hours</span></div>
           <div class="roi-row"><span class="lbl">Value of 20 hrs at physician rates</span><span class="val green">$6,000+</span></div>
+          <div class="roi-row"><span class="lbl">What forMaD costs</span><span class="val coral">Less than 1% of that</span></div>
         </div>
       </div>
 
       <div class="fu">
         <div class="plan-card">
-          <div class="plan-name">Physician · Launch Pricing</div>
+          <div class="plan-name">Physician · Founding Access</div>
           <div class="plan-price">
-            <span class="price-big">$8.99</span>
-            <span class="price-per"> CAD / month</span>
+            <span class="price-big">Simple usage-based pricing</span>
           </div>
-          <div class="price-form">+ <strong>$0.89 CAD</strong> per form completed</div>
+          <div class="price-form">A small base fee, then pay only per form completed. <strong>Founding members lock in launch rates.</strong></div>
           <div class="plan-div"></div>
           <div class="plan-feats">
             <div class="plan-feat">300+ forms across 20 specialties</div>
@@ -1044,16 +1120,11 @@
             <div class="plan-feat">Real trial citations, not generic text</div>
             <div class="plan-feat">Download the actual government or insurer PDF, pre-filled</div>
             <div class="plan-feat">Patient PHI never touches the AI</div>
-            <div class="plan-feat">HIPAA and PHIPA-compliant data handling. Your notes never train any AI model.</div>
+            <div class="plan-feat">PHI-secured data handling, adhering to HIPAA and PHIPA standards. Your notes never train any AI model.</div>
             <div class="plan-feat">Launch pricing locked in for founding members</div>
           </div>
           <a href="#early-access" class="plan-btn">Join early access</a>
           <div class="plan-note">No credit card required to join the waitlist</div>
-        </div>
-
-        <div class="group-strip">
-          <span><strong>Practices of 5+ physicians?</strong> Ask about group pricing and pharma-sponsored access.</span>
-          <a href="mailto:hello@formad.health">Contact us →</a>
         </div>
       </div>
     </div>
@@ -1104,7 +1175,7 @@
       <div class="footer-tag">
         Physicians practice medicine.<br>
         for<em class="wm">M</em>a<em class="wm">D</em> handles the forms.<br><br>
-        formad.health &nbsp;·&nbsp; formad.ca
+        formad.ca
       </div>
     </div>
 
@@ -1119,13 +1190,13 @@
       <div class="footer-col">
         <h4>Company</h4>
         <a href="mailto:hello@formad.health">Contact</a>
-        <a href="mailto:pharma@formad.health">Pharma partnerships</a>
+        <a href="mailto:hello@formad.health">Partnership</a>
         <a href="#">Privacy policy</a>
         <a href="#">Terms of use</a>
       </div>
       <div class="footer-col">
         <h4>Specialties</h4>
-        <a href="#">Oncology forms</a>
+        <a href="#">Oncology</a>
         <a href="#">Rheumatology</a>
         <a href="#">Neurology</a>
         <a href="#">All specialties</a>
@@ -1135,7 +1206,7 @@
 
   <div class="footer-bottom">
     <div class="footer-legal">
-      forMaD is a personal productivity tool for physicians. Not owned by any healthcare organization, hospital, or insurer. AI-generated content must be reviewed and verified by the treating physician before submission. The treating physician remains solely responsible for the accuracy of submitted documentation. Patient identifying information is never processed by our AI. Notes are handled in a HIPAA and PHIPA-compliant environment and are not used to train AI models.
+      forMaD is a personal productivity tool for physicians. Not owned by any healthcare organization, hospital, or insurer. AI-generated content must be reviewed and verified by the treating physician before submission. The treating physician remains solely responsible for the accuracy of submitted documentation. Patient identifying information is never processed by our AI. Notes are handled in a PHI-secured environment, adhering to HIPAA and PHIPA standards, and are not used to train AI models.
     </div>
     <div class="footer-corp">© 2026 for<em class="wm">M</em>a<em class="wm">D</em> Health Inc.</div>
   </div>
@@ -1171,6 +1242,19 @@
     let cur = '';
     secs.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
     links.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? '#FF6B6B' : ''; });
+  });
+
+  // Smooth in-page scrolling for ALL anchor links (hero buttons, captions, etc.)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   });
 </script>
 </body>
