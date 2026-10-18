@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — forMaD</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%231C1C2E%22%2F%3E%3Cg%20transform%3D%22translate%2822.9%2C50%29%20scale%280.62%29%22%3E%3Cpath%20d%3D%22M0%20-26%20L26%200%20L0%2026%20L-4.77%2021.23%20L16.47%200%20L-4.77%20-21.23%20Z%22%20fill%3D%22%23FF6B6B%22%2F%3E%3Cpath%20d%3D%22M33.09%20-26%20L59.09%200%20L33.09%2026%20L28.33%2021.23%20L49.56%200%20L28.33%20-21.23%20Z%22%20fill%3D%22%23FF6B6B%22%20opacity%3D%220.55%22%2F%3E%3Cpath%20d%3D%22M66.19%20-26%20L92.19%200%20L66.19%2026%20L61.42%2021.23%20L82.65%200%20L61.42%20-21.23%20Z%22%20fill%3D%22%23FF6B6B%22%20opacity%3D%220.28%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+  <meta name="description" content="The forMaD Terms of Service: the agreement between forMaD Health Inc. and the Canadian physicians and delegates who use forMaD, including the Health Information Processing Schedule.">
+  <link rel="canonical" href="https://formad.ca/terms">
+  <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:   #1C1C2E;
+      --coral:  #FF6B6B;
+      --c55:    rgba(255,107,107,0.55);
+      --c25:    rgba(255,107,107,0.25);
+      --c10:    rgba(255,107,107,0.10);
+      --white:  #FFFFFF;
+      --off:    #F4F4F8;
+      --muted:  #9A9AA8;
+      --dim:    #6B6B7A;
+      --border: rgba(255,255,255,0.08);
+      --r:      14px;
+      /* Legal pages only: darker coral for text links on light backgrounds (5.2:1 on --off) */
+      --coral-ink: #B8383C;
+      --ink-2:  #4A4A5A;
+      --rule:   rgba(28,28,46,0.12);
+      --todo:   #FFE600;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* forMaD wordmark: M and D coral. Only in nav, hero h1, footer. Body text: plain forMaD */
+    em.wm {
+      font-style: normal;
+      color: var(--coral);
+    }
+
+    .skip {
+      position: absolute; left: 12px; top: -60px; z-index: 200;
+      background: var(--coral); color: var(--dark); font-weight: 700;
+      padding: 10px 16px; border-radius: 8px; text-decoration: none;
+    }
+    .skip:focus { top: 12px; }
+
+    /* ── NAV (from index.html) ───────────────────────────────────────── */
+    nav.site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 68px;
+      background: rgba(28,28,46,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+
+    .nav-wordmark {
+      font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--white);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 36px; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a[aria-current="page"] { color: var(--white); }
+
+    .nav-cta {
+      background: var(--coral); color: var(--white);
+      padding: 9px 22px; border-radius: 8px;
+      font-size: 14px; font-weight: 600;
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .nav-links a.nav-cta { color: var(--white); }
+    .nav-cta:hover { opacity: 0.88; color: var(--white); }
+
+    .nav-portal {
+      display: flex; align-items: center; gap: 6px;
+      color: var(--dark); text-decoration: none;
+      font-size: 13px; font-weight: 600;
+      padding: 7px 16px; border-radius: 8px;
+      background: var(--white);
+      transition: all 0.2s;
+    }
+    .nav-links a.nav-portal { color: var(--dark); }
+    .nav-portal:hover { background: #f0f0f0; }
+    .nav-portal svg { flex-shrink: 0; stroke: var(--dark); }
+
+    .nav-home {
+      display: none;
+      font-size: 14px; font-weight: 600; color: var(--off);
+      text-decoration: none; padding: 8px 2px;
+    }
+    .nav-home:hover { color: var(--coral); }
+
+    .eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--coral);
+      margin-bottom: 20px; display: block;
+    }
+
+    /* ── DOCUMENT HEADER ─────────────────────────────────────────────── */
+    .doc-head {
+      position: relative; overflow: hidden;
+      padding: 140px 48px 64px;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-head::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 30% 0%, rgba(255,107,107,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .doc-head-inner { position: relative; max-width: 760px; margin: 0 auto; }
+    .doc-h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 700; line-height: 1.08;
+      letter-spacing: -0.03em; color: var(--white);
+      margin-bottom: 20px;
+    }
+    .doc-meta { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.72); }
+    .doc-meta strong { font-weight: 600; color: rgba(255,255,255,0.86); }
+
+    /* ── DOCUMENT BODY ───────────────────────────────────────────────── */
+    .doc { background: var(--off); color: var(--dark); padding: 56px 48px 96px; }
+    .doc-grid { max-width: 760px; margin: 0 auto; }
+
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      padding: 22px 24px;
+      margin-bottom: 48px;
+    }
+    .toc-title {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--dim); margin-bottom: 12px;
+    }
+    .toc ol { list-style: none; }
+    .toc li { break-inside: avoid; }
+    .toc a {
+      display: block; padding: 5px 0;
+      font-size: 14px; font-weight: 500; line-height: 1.4;
+      color: var(--ink-2); text-decoration: none;
+      border-left: 2px solid transparent; padding-left: 10px; margin-left: -12px;
+    }
+    .toc a:hover, .toc a:focus-visible { color: var(--coral-ink); border-left-color: var(--coral); }
+    @media (min-width: 640px) and (max-width: 1179px) {
+      .toc ol { column-count: 2; column-gap: 32px; }
+    }
+    @media (min-width: 1180px) {
+      .doc-head-inner { max-width: 1084px; padding-left: 324px; }
+      .doc-grid {
+        max-width: 1084px;
+        display: grid; grid-template-columns: 260px minmax(0, 760px);
+        gap: 64px; align-items: start;
+      }
+      .toc {
+        position: sticky; top: 92px;
+        max-height: calc(100vh - 116px); overflow-y: auto;
+        margin-bottom: 0; padding: 20px 22px;
+      }
+    }
+
+    .doc-body {
+      font-size: 17px; line-height: 1.72; color: var(--dark);
+      overflow-wrap: break-word; min-width: 0;
+    }
+    .doc-body .lede { font-size: 19px; line-height: 1.65; color: var(--ink-2); margin-bottom: 8px; }
+    .doc-sec { padding-top: 44px; margin-top: 44px; border-top: 1px solid var(--rule); }
+    .doc-intro + .doc-sec, .doc-body > .doc-sec:first-child { margin-top: 32px; }
+    .doc-body > .doc-sec:first-child { padding-top: 0; border-top: none; margin-top: 0; }
+    .doc-body h2 {
+      font-size: clamp(24px, 3vw, 30px); font-weight: 700;
+      line-height: 1.2; letter-spacing: -0.02em;
+      margin-bottom: 22px; color: var(--dark);
+    }
+    .doc-body h3 {
+      font-size: 20px; font-weight: 700; line-height: 1.3;
+      letter-spacing: -0.01em; margin: 34px 0 14px; color: var(--dark);
+    }
+    .doc-body p { margin-bottom: 1.05em; }
+    .doc-body strong { font-weight: 700; color: var(--dark); }
+    .doc-body em { font-style: italic; }
+    .doc-body ul, .doc-body ol { margin: 0 0 1.2em; padding-left: 1.5em; }
+    .doc-body li { margin-bottom: 0.6em; padding-left: 0.2em; }
+    .doc-body li > ul, .doc-body li > ol { margin-top: 0.6em; }
+    .doc-body ul > li::marker { color: var(--coral-ink); }
+    .doc-body ol > li::marker { color: var(--dim); font-weight: 600; }
+    .doc-body [id] { scroll-margin-top: 88px; }
+    .doc-body li > p { margin-bottom: 0.45em; }
+    .doc-body li > p:last-child { margin-bottom: 0; }
+    .doc-body a { color: var(--coral-ink); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+    .doc-body a:hover { text-decoration-thickness: 2px; }
+    .doc-body .to-top a { text-decoration: none; }
+
+    .doc-body ul.checklist { list-style: none; padding-left: 0; }
+    .doc-body ul.checklist li { display: flex; gap: 12px; align-items: flex-start; padding-left: 0; }
+    .doc-body .box { flex: none; font-size: 1.25em; line-height: 1.3; color: var(--dark); }
+
+    mark.todo {
+      background: var(--todo); color: var(--dark);
+      font-weight: 700; padding: 1px 4px; border-radius: 3px;
+      box-shadow: 0 0 0 2px #F5B800;
+      -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    }
+
+    .table-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      margin: 0 0 1.6em; background: var(--white);
+      border: 1px solid var(--rule); border-radius: 12px;
+    }
+    .table-wrap:focus-visible { outline: 2px solid var(--coral-ink); outline-offset: 2px; }
+    .scroll-hint { display: none; margin: 0 0 6px !important; font-size: 12.5px; font-weight: 600; color: var(--dim); text-align: right; }
+    @media (max-width: 860px) { .scroll-hint.c4 { display: block; } }
+    @media (max-width: 680px) { .scroll-hint.c3 { display: block; } }
+    .doc-body table { border-collapse: collapse; width: 100%; font-size: 15px; line-height: 1.55; }
+    .doc-body table.cols-3 { min-width: 600px; }
+    .doc-body table.cols-4 { min-width: 760px; }
+    .doc-body th, .doc-body td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid rgba(28,28,46,0.09); }
+    .doc-body th {
+      background: #EEEEF3; color: var(--dark);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .doc-body tbody tr:last-child td { border-bottom: none; }
+    .doc-body td:first-child { font-weight: 600; }
+    .doc-body table.cols-4 td:first-child { min-width: 150px; }
+
+    .to-top { margin-top: 26px; margin-bottom: 0 !important; font-size: 14px; }
+    .to-top a { color: var(--coral-ink); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(184,56,60,0.35); }
+    .to-top a:hover { border-bottom-color: var(--coral-ink); }
+
+    /* ── DATA-FLOW FIGURE (privacy section 4) ────────────────────────── */
+    .flow-fig {
+      margin: 28px 0 30px; padding: 22px;
+      background: var(--white); border: 1px solid var(--rule); border-radius: var(--r);
+    }
+    .flow-title { font-size: 16px !important; font-weight: 700; line-height: 1.4; margin-bottom: 18px !important; }
+    .flow, .flow ol { list-style: none; margin: 0 !important; padding: 0 !important; }
+    .flow li { margin: 0; padding: 0; }
+    .flow li::marker { content: none; }
+    .stage + .stage { margin-top: 12px !important; }
+    .stage-link {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px !important; font-weight: 600; color: var(--dim);
+      margin: 0 0 10px !important; line-height: 1.4;
+    }
+    .stage-link .ar { color: var(--coral-ink); font-size: 17px; line-height: 1; }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+    .stage-review .steps { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+    .flow .step {
+      position: relative;
+      background: var(--off); border: 1px solid rgba(28,28,46,0.14); border-radius: 10px;
+      padding: 10px 12px 12px; font-size: 13.5px; line-height: 1.45;
+    }
+    .step strong { display: block; font-size: 14.5px; line-height: 1.3; margin-bottom: 3px; padding-right: 18px; }
+    .step .note { display: block; color: var(--ink-2); }
+    .step .n {
+      position: absolute; top: 9px; right: 10px;
+      font-size: 11px; font-weight: 700; color: var(--dim);
+    }
+    .place {
+      display: inline-block; margin-bottom: 7px; margin-right: 18px;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.01em;
+      padding: 2px 8px; border-radius: 5px; line-height: 1.5;
+    }
+    .dev .place { background: var(--dark); color: var(--white); }
+    .srv .place { background: var(--coral); color: var(--dark); }
+    .step.ai { background: var(--dark); border-color: var(--dark); color: var(--white); }
+    .step.ai strong { color: var(--white); }
+    .step.ai .note { color: rgba(255,255,255,0.78); }
+    .step.ai .n { color: rgba(255,255,255,0.7); }
+    .ai .place { background: rgba(255,255,255,0.16); color: var(--white); }
+    .step.hi { background: #FFF1F1; border: 2px solid var(--coral); }
+    .flow .db-group {
+      border: 1.5px dashed rgba(184,56,60,0.55); border-radius: 12px;
+      padding: 10px 10px 10px;
+    }
+    .db-group > .place { color: var(--coral-ink); border: 1px solid rgba(184,56,60,0.45); background: transparent; }
+    .db-group ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .arr {
+      position: absolute; top: 50%; right: -26px;
+      width: 26px; height: 12px; margin-top: -6px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 12'%3E%3Cpath d='M2 6H18' stroke='%23B8383C' stroke-width='2'/%3E%3Cpath d='M17 1L25 6L17 11Z' fill='%23B8383C'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+    }
+    .arr.dash { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 12'%3E%3Cpath d='M2 6H18' stroke='%23B8383C' stroke-width='2' stroke-dasharray='3 2.5'/%3E%3Cpath d='M17 1L25 6L17 11Z' fill='%23B8383C'/%3E%3C/svg%3E"); }
+    .flow-fig figcaption {
+      margin-top: 16px; text-align: center;
+      font-size: 13px; color: var(--dim); line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .flow-fig { padding: 16px; }
+      .steps, .stage-review .steps { grid-template-columns: minmax(0, 1fr); }
+      .arr {
+        top: auto; right: auto; bottom: -26px; left: 50%;
+        width: 12px; height: 26px; margin: 0 0 0 -6px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 26'%3E%3Cpath d='M6 2V18' stroke='%23B8383C' stroke-width='2'/%3E%3Cpath d='M1 17L6 25L11 17Z' fill='%23B8383C'/%3E%3C/svg%3E");
+      }
+      .arr.dash { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 26'%3E%3Cpath d='M6 2V18' stroke='%23B8383C' stroke-width='2' stroke-dasharray='3 2.5'/%3E%3Cpath d='M1 17L6 25L11 17Z' fill='%23B8383C'/%3E%3C/svg%3E"); }
+    }
+    @media (max-width: 520px) {
+      .db-group ol { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    /* ── FOOTER (from index.html) ────────────────────────────────────── */
+    footer {
+      background: #131320;
+      padding: 48px 48px 36px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-top {
+      display: flex; align-items: flex-start;
+      justify-content: space-between; margin-bottom: 40px;
+      flex-wrap: wrap; gap: 32px;
+    }
+
+    .footer-brand { max-width: 300px; }
+
+    .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+
+    .footer-wm { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--white); }
+
+    .footer-tag { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    .footer-cols { display: flex; gap: 48px; flex-wrap: wrap; }
+
+    .footer-col h2 {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
+    }
+
+    .footer-col a {
+      display: block; font-size: 14px; color: rgba(255,255,255,0.62);
+      text-decoration: none; margin-bottom: 10px; transition: color 0.2s;
+    }
+    .footer-col a:hover, .footer-col a[aria-current="page"] { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border); padding-top: 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+
+    .footer-legal { font-size: 12px; color: var(--muted); line-height: 1.65; max-width: 580px; }
+    .footer-corp { font-size: 12px; color: rgba(255,255,255,0.5); white-space: nowrap; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav.site-nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-home { display: inline-block; }
+      .doc-head { padding: 116px 20px 48px; }
+      .doc { padding: 40px 20px 72px; }
+      footer { padding: 72px 24px; }
+      .footer-top { flex-direction: column; }
+      .footer-cols { gap: 28px; }
+      .doc-body { font-size: 16.5px; }
+      .doc-body .lede { font-size: 18px; }
+      .toc { padding: 18px 20px; }
+    }
+    @media (max-width: 400px) {
+      .doc-head { padding-left: 16px; padding-right: 16px; }
+      .doc { padding-left: 16px; padding-right: 16px; }
+      .doc-body ul, .doc-body ol { padding-left: 1.25em; }
+    }
+
+    /* ── PRINT ───────────────────────────────────────────────────────── */
+    @media print {
+      @page { margin: 16mm 14mm; }
+      html { scroll-behavior: auto; }
+      body { background: #fff !important; color: #000 !important; overflow: visible; }
+      nav, .toc, .to-top, .skip, .scroll-hint, footer { display: none !important; }
+      .doc-head { background: #fff !important; padding: 0 0 10pt; border-bottom: 1pt solid #000; overflow: visible; }
+      .doc-head::before { display: none; }
+      .doc-head-inner { max-width: none; padding: 0 !important; }
+      .eyebrow, .doc-h1, .doc-meta, .doc-meta strong, em.wm { color: #000 !important; }
+      .doc-h1 { font-size: 22pt; margin-bottom: 6pt; }
+      .doc { background: #fff !important; color: #000; padding: 12pt 0 0; }
+      .doc-grid { display: block; max-width: none; }
+      .doc-body { font-size: 10.5pt; line-height: 1.5; color: #000; }
+      .doc-body .lede { font-size: 11.5pt; color: #000; }
+      .doc-body h2, .doc-body h3, .doc-body strong, .doc-body .box { color: #000; }
+      .doc-sec { border-top: none; margin-top: 16pt; padding-top: 0; }
+      .doc-body h2 { font-size: 15pt; margin-bottom: 8pt; }
+      .doc-body h3 { font-size: 12pt; margin: 12pt 0 6pt; }
+      .doc-body h2, .doc-body h3 { break-after: avoid; page-break-after: avoid; }
+      .doc-body li, .doc-body tr, .step, .flow-fig { break-inside: avoid; page-break-inside: avoid; }
+      .doc-body ul > li::marker, .doc-body ol > li::marker { color: #000; }
+      a { color: #000 !important; text-decoration: none; }
+      .table-wrap { overflow: visible; border: none; border-radius: 0; background: #fff; }
+      .doc-body table { min-width: 0 !important; width: calc(100% - 2px); margin: 1px; font-size: 8.5pt; }
+      .doc-body th, .doc-body td { border: 0.75pt solid #666; padding: 4pt 5pt; color: #000; background: #fff !important; }
+      .doc-body tbody tr:last-child td { border-bottom: 0.75pt solid #666; }
+      mark.todo { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .flow-fig { border: 1pt solid #000; background: #fff; padding: 10pt; }
+      .step, .step.ai, .step.hi { background: #fff !important; color: #000 !important; border: 1pt solid #000 !important; }
+      .step.ai strong, .step .note, .step.ai .note, .step .n, .step.ai .n, .stage-link, .flow-fig figcaption { color: #000 !important; }
+      .place, .dev .place, .srv .place, .ai .place, .db-group > .place { background: #fff !important; color: #000 !important; border: 1pt solid #000; }
+      .db-group { border-color: #000; }
+      .arr { -webkit-print-color-adjust: exact; print-color-adjust: exact; filter: grayscale(1) brightness(0); }
+      .stage-link .ar { color: #000; }
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip" href="#content">Skip to content</a>
+
+<!-- NAV -->
+<nav class="site-nav" aria-label="Main">
+  <a href="/" class="nav-logo" aria-label="forMaD home page">
+    <svg width="36" height="28" viewBox="8 33 98 54" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g transform="translate(13.58,60)">
+        <path d="M-0.00 -26.00 L 26.00 -0.00 L 0.00 26.00 L -4.77 21.23 L 16.47 -0.00 L -4.77 -21.23 Z" fill="#FF6B6B"/>
+        <path d="M33.09 -26.00 L 59.09 -0.00 L 33.09 26.00 L 28.33 21.23 L 49.56 -0.00 L 28.33 -21.23 Z" fill="#FF6B6B" opacity="0.55"/>
+        <path d="M66.19 -26.00 L 92.19 -0.00 L 66.19 26.00 L 61.42 21.23 L 82.65 -0.00 L 61.42 -21.23 Z" fill="#FF6B6B" opacity="0.28"/>
+      </g>
+    </svg>
+    <span class="nav-wordmark">for<em class="wm">M</em>a<em class="wm">D</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="https://app.formad.health/login" class="nav-portal" title="Physician portal" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <span>Sign in</span>
+    </a>
+    <a href="/#early-access" class="nav-cta">Get early access</a>
+  </div>
+  <a href="/" class="nav-home"><span aria-hidden="true">&larr;</span> Home</a>
+</nav>
+
+<main id="content">
+  <header class="doc-head" id="top">
+    <div class="doc-head-inner">
+      <span class="eyebrow">Legal</span>
+      <h1 class="doc-h1">forMaD — Terms of Service</h1>
+      <p class="doc-meta"><strong>Version 2.0 · Effective October 18, 2026</strong></p>
+    </div>
+  </header>
+
+  <div class="doc">
+    <div class="doc-grid">
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title">Contents</p>
+        <ol>
+        <li><a href="#key-terms">The key terms in brief</a></li>
+        <li><a href="#section-1">1. The agreement and key definitions</a></li>
+        <li><a href="#section-2">2. Eligibility, verification, accounts and Delegates</a></li>
+        <li><a href="#section-3">3. What forMaD is, and what it is not</a></li>
+        <li><a href="#section-4">4. AI features</a></li>
+        <li><a href="#section-5">5. Your responsibilities</a></li>
+        <li><a href="#section-6">6. Health information: who is responsible for what</a></li>
+        <li><a href="#section-7">7. Plans, fees and payment features</a></li>
+        <li><a href="#section-8">8. Acceptable use</a></li>
+        <li><a href="#section-9">9. Intellectual property</a></li>
+        <li><a href="#section-10">10. Third-party forms, programs and services</a></li>
+        <li><a href="#section-11">11. Disclaimers, limitation of liability and indemnity</a></li>
+        <li><a href="#section-12">12. Suspension, termination and your data</a></li>
+        <li><a href="#section-13">13. Changes, governing law, language and general terms</a></li>
+        <li><a href="#schedule-a">Schedule A: Health Information Processing Schedule</a></li>
+        <li><a href="#schedule-b">Schedule B: Enrollment acknowledgements</a></li>
+        </ol>
+      </nav>
+
+<article class="doc-body"><div class="doc-intro"><p class="lede">These Terms govern the use of forMaD by physicians and their Delegates. The summary below is for convenience; the full Terms govern.</p></div><section aria-labelledby="key-terms-h" class="doc-sec" id="key-terms"><h2 id="key-terms-h">The key terms in brief</h2>
+<ul>
+<li><strong>What forMaD is.</strong> Administrative software that drafts forms and letters for licensed physicians to review, sign and submit. It is not a medical device, gives no medical advice, and does not submit anything for you (section 3).</li>
+<li><strong>Your two core duties.</strong> Remove patient identifiers from clinical notes before entering them, and review and verify every field of AI-generated content. The Physician who signs a form is responsible for it (sections 4 and 5).</li>
+<li><strong>Health information.</strong> You or your practice is the custodian. forMaD handles it only on your behalf, under Schedule A, and never uses it to train AI (sections 4.7 and 6).</li>
+<li><strong>Patient Details.</strong> Used only to fill the document you download, and never sent to the AI provider. Our servers do not keep them unless you save a Draft containing them. File references you type stay in your browser. forMaD does not keep Completed Forms, so file them in your own record (sections 3.5 and 5.4).</li>
+<li><strong>Quality Records.</strong> Optional. You choose in Schedule B whether forMaD may keep time-limited Quality Records to check draft accuracy and, once properly de-identified, to improve the Service (section 6.3).</li>
+<li><strong>Fees.</strong> Plans renew automatically; cancel at any time. With Payment Features, you are the seller and forMaD charges a platform fee on invoices that are paid, or still unpaid 30 days after their due date (section 7).</li>
+<li><strong>Liability.</strong> Each party's liability is capped, with a higher cap for forMaD's breach of Schedule A or a security incident on its systems. Each party indemnifies the other for claims caused by its own conduct (section 11).</li>
+<li><strong>Law and scope.</strong> Ontario law; Ontario courts or the courts of your own province. Offered in the provinces listed in section 2.1, not currently in Quebec (section 13).</li>
+</ul>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-1-h" class="doc-sec" id="section-1"><h2 id="section-1-h">1. The agreement and key definitions</h2>
+<p id="section-1-1"><strong>1.1 Parties.</strong> These Terms of Service (the "Terms") are a binding agreement between forMaD Health Inc. ("forMaD", "we", "us") and you. "You" means the individual who creates or uses an account. If you register or use the Service for a medical practice, clinic or other organization, "you" also means that organization, and you confirm you have authority to bind it.</p>
+<p id="section-1-2"><strong>1.2 How you accept.</strong> You accept these Terms by ticking the acceptance boxes in Schedule B. No Health Information may be entered for a Physician until that Physician, or the Custodian for whom the Physician acts, has accepted these Terms and Schedule A in this way. We keep a record of each acceptance: the version, who accepted it and when.</p>
+<p id="section-1-3"><strong>1.3 What the agreement includes.</strong> The agreement consists of these Terms, Schedule A (Health Information Processing Schedule), Schedule B (Enrollment Acknowledgements), and the plan, price and feature details shown to you in the Service when you subscribe or turn on a feature. If they conflict, Schedule A governs anything concerning Health Information, then these Terms, then the plan and feature details. Our Privacy Policy explains how we handle personal information; it is not part of this contract except where these Terms expressly refer to it.</p>
+<p id="section-1-4"><strong>1.4 Definitions.</strong> In these Terms:</p>
+<ul>
+<li><strong>"Service"</strong> means the forMaD web application at app.formad.health, our website at formad.ca, our emails and our support.</li>
+<li><strong>"Account Holder"</strong> means the Physician (or the practice) in whose name an account is registered and who is responsible for it.</li>
+<li><strong>"Physician"</strong> means an individual who holds a current licence or certificate of registration to practise medicine issued by a Canadian medical regulatory authority.</li>
+<li><strong>"Delegate"</strong> means an individual whom an Account Holder authorizes to use the Service on the Account Holder's behalf under section 2.5.</li>
+<li><strong>"Profile"</strong> means the physician details used to populate forms: name, degrees, licence number, specialty, practice address and contact details, billing number and affiliations.</li>
+<li><strong>"Clinical Content"</strong> means the clinical notes, answers and other information you enter so the Service can prepare a draft, and the reviewed clinical content of a form, but not Patient Details.</li>
+<li><strong>"Patient Details"</strong> means information that identifies a patient or another individual, such as a name, date of birth, health number, address, telephone number, email address, chart or file number, social insurance number or passport details, that you add to complete a form, letter or invoice.</li>
+<li><strong>"Health Information"</strong> means personal health information, or personal information about an individual's health, as defined in applicable Privacy Law, including any Clinical Content or Patient Details that identifies an individual or could reasonably be used, alone or with other information, to identify one.</li>
+<li><strong>"Customer Personal Information"</strong> has the meaning given in Schedule A, section A1.</li>
+<li><strong>"Draft"</strong> means a form saved in the Service before it is downloaded, or kept after download until it is deleted.</li>
+<li><strong>"Output"</strong> means text, field values, suggested literature references and any other content the Service generates for your review, including content generated with artificial intelligence ("AI").</li>
+<li><strong>"Completed Form"</strong> means a form, letter or invoice you download from the Service.</li>
+<li><strong>"Quality Record"</strong> means a record, created when a Physician who has authorized it finishes reviewing a form, of the form type, drug, specialty, province, the Output first generated and the reviewed version, after automated removal of identifying fields and patterns. A Quality Record is Customer Personal Information.</li>
+<li><strong>"De-identified Data"</strong> means information that meets the standard in Schedule A, section A7.3.</li>
+<li><strong>"Aggregate Statistics"</strong> means counts, rates and other summary figures that contain no free text from any form, describe at least 10 forms from at least 5 Physicians in every reported figure, use no geographic unit smaller than a province, and identify no individual, Physician or practice.</li>
+<li><strong>"Payment Features"</strong> means the invoicing and online payment features described in section 7.6.</li>
+<li><strong>"Privacy Law"</strong> means the privacy and health-information laws that apply to you or to us, including the <em>Personal Information Protection and Electronic Documents Act</em> (Canada); the <em>Personal Health Information Protection Act, 2004</em> (Ontario) ("PHIPA"); the <em>Health Information Act</em> (Alberta); the <em>Personal Information Protection Act</em> of British Columbia and of Alberta; and the health-information statutes of the other provinces.</li>
+<li><strong>"Custodian"</strong> means the person or organization that has custody or control of Health Information under Privacy Law (for example, a "health information custodian", "custodian" or "trustee"). For Health Information you enter, that is you, your practice, or the institution you act for.</li>
+</ul>
+<p id="section-1-5"><strong>1.5 Interpretation.</strong> "Including" means "including without limitation". Headings are for convenience only. Amounts are in Canadian dollars unless stated otherwise.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-2-h" class="doc-sec" id="section-2"><h2 id="section-2-h">2. Eligibility, verification, accounts and Delegates</h2>
+<p id="section-2-1"><strong>2.1 Who may use the Service.</strong> The Service is for Physicians practising in Ontario, Alberta, British Columbia, Saskatchewan, Manitoba, New Brunswick, Nova Scotia or Newfoundland and Labrador, and their Delegates. It is not currently offered in Quebec, Prince Edward Island or the territories, and it is not offered to patients or the public. You must be of the age of majority where you live. If you are a Physician, you confirm that your licence is current and in good standing, and you will tell us promptly if it is suspended, revoked, or restricted in a way that affects the forms you complete, or if you stop practising.</p>
+<p id="section-2-2"><strong>2.2 Verification.</strong> Before a Profile can be used to download forms or issue invoices, we check the Physician's name, licence number and province against the public register of the relevant medical regulatory authority. This is a manual, point-in-time check. It is not a representation by us about any Physician, and it does not relieve anyone of their own obligations. We may re-verify at any time. Changing a Profile's name, licence number or province returns it to unverified. We will not verify a Profile whose practice address is in Quebec or another place where the Service is not offered. We may refuse, suspend or end access if we cannot verify a Physician or for any reason described in section 12.</p>
+<p id="section-2-3"><strong>2.3 Profiles for other Physicians.</strong> An account may hold Profiles for more than one Physician, for example in a group practice or where an assistant supports several Physicians. You may add a Profile for another Physician only by inviting that Physician to accept these Terms, including Schedule A, directly. A Profile cannot be verified or used, and no Health Information may be entered for it, until that Physician has done so. If Physicians on one account are separate Custodians, Drafts for one Physician's patients may be accessed only by that Physician and the Delegates that Physician has authorized. The Physician named on a Completed Form is responsible for it.</p>
+<p id="section-2-4"><strong>2.4 Account security.</strong> You sign in with one-time codes sent to your email address. You are responsible for:</p>
+<ul>
+<li>securing the email account that receives your codes (we strongly recommend multi-factor authentication on it);</li>
+<li>keeping codes confidential and never sharing your sign-in;</li>
+<li>securing the devices and browsers you use, including signing out and clearing stored data on shared or clinic computers (the Service keeps some information in your browser, as described in our Privacy Policy); and</li>
+<li>all activity under your account, except activity resulting from our breach of our security obligations.</li>
+</ul>
+<p>Tell us immediately at <a href="mailto:hello@formad.ca">hello@formad.ca</a> if you suspect unauthorized access.</p>
+<p id="section-2-5"><strong>2.5 Delegates.</strong> Where we have enabled Delegates for your account, an Account Holder may authorize Delegates, up to the number we set.</p>
+<ul>
+<li><strong>How Delegates join.</strong> Each Delegate signs in with their own email address and must accept these Terms. A Delegate acts only on the Account Holder's behalf, on the Account Holder's instructions and under the Account Holder's supervision. For Privacy Law purposes, Delegates are your agents, not ours.</li>
+<li><strong>What Delegates can do.</strong> A Delegate can view the Account Holder's Profiles (including contact details and billing number); prepare AI drafts; view, edit and delete the account's drafts; download Completed Forms that carry the Physician's name and Profile details; request new forms; and, if we have enabled payment features for them, create and manage invoices.</li>
+<li><strong>What Delegates cannot do.</strong> A Delegate cannot change Profiles, manage other Delegates, change the plan or payment settings, or access the Account Holder's payment account. The role label you give a Delegate is for your records only; it does not change what the Delegate can do.</li>
+<li><strong>Your responsibilities.</strong> You will authorize only individuals who are suitably trained and bound by confidentiality obligations that meet Privacy Law; supervise them; review the activity log the Service provides; and remove access promptly when it is no longer needed. You are responsible for your Delegates' acts and omissions as if they were your own.</li>
+<li><strong>Signing and submission stay with the Physician.</strong> A Delegate may prepare a form and add Patient Details, but the Physician must personally review and approve the clinical content of every Completed Form before it is signed or submitted. A Delegate must not sign for a Physician or submit a form the Physician has not approved.</li>
+<li><strong>If you are a Delegate.</strong> You confirm that the Account Holder has authorized you, that you will follow the Account Holder's lawful instructions and these Terms, and that your access ends when the Account Holder removes you or the account ends.</li>
+</ul>
+<p id="section-2-6"><strong>2.6 Accurate information.</strong> You will keep your account and Profile information accurate and current. Forms will be populated with the Profile details you provide.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-3-h" class="doc-sec" id="section-3"><h2 id="section-3-h">3. What forMaD is, and what it is not</h2>
+<p id="section-3-1"><strong>3.1 Intended use.</strong> forMaD is administrative software. It helps Physicians and their Delegates prepare drafts of medical, insurance, government, drug-access and patient-support-program forms, letters and related invoices, using information the user provides, and then fill the official document for the Physician to review, sign and submit. Its intended use is administrative document preparation under the continuous supervision of a licensed Physician.</p>
+<p id="section-3-2"><strong>3.2 Not a medical device or clinical tool.</strong> forMaD is not intended to diagnose, treat, mitigate or prevent any disease or condition, to make or recommend clinical decisions, or to replace a Physician's clinical judgment, and it is not marketed for those purposes. You must not use it for those purposes. We may change or withdraw features to keep the Service within its intended use. Any eligibility criteria, program requirements or literature the Service shows are administrative aids for completing a document. They are not clinical recommendations.</p>
+<p id="section-3-3"><strong>3.3 No professional advice.</strong> forMaD does not practise medicine and does not give medical, legal, tax, insurance, immigration or financial advice. Nothing in the Service creates a physician-patient relationship between forMaD and anyone.</p>
+<p id="section-3-4"><strong>3.4 No submission and no outcome guarantee.</strong> forMaD does not submit forms, communicate with patients, insurers, government programs or drug manufacturers on your behalf, or act as your agent toward them. We do not promise that any application, claim, enrolment, funding request or visa application will be accepted, approved or processed on time.</p>
+<p id="section-3-5"><strong>3.5 Not your medical record.</strong> forMaD is not an electronic medical record or a record-keeping system, and it does not keep Completed Forms. Drafts are deleted automatically 45 days after they were last saved or finished. You are responsible for keeping a copy of every Completed Form, and any information your professional obligations require you to retain, in your own medical record for the period your regulatory authority requires.</p>
+<p id="section-3-6"><strong>3.6 Third-party documents.</strong> The forms in our library belong to the governments, insurers, manufacturers and other organizations that issue them. We try to use current versions and requirements, but organizations change their forms, criteria and processes without telling us. You are responsible for confirming that the version and requirements you use are current and appropriate.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-4-h" class="doc-sec" id="section-4"><h2 id="section-4-h">4. AI features</h2>
+<p id="section-4-1"><strong>4.1 How drafts are produced.</strong> When you ask for a draft, the Service sends your Clinical Content and form inputs to a third-party AI model provider, which returns proposed text and field values. The Service may also: suggest published literature and check suggested references against public bibliographic databases; flag fields that may need your attention; and shorten text to fit a form field. Our Privacy Policy names our AI provider and describes what it receives.</p>
+<p id="section-4-2"><strong>4.2 Limits of AI.</strong> Output is generated by probabilistic models. It can be wrong, incomplete, out of date, inconsistent with your notes, or worded in a way that overstates or understates a patient's condition. Suggested references may be inaccurate or may not support the statement they are attached to, even after our automated checks. The same input can produce different Output at different times. We do not review Output before it is shown to you.</p>
+<p id="section-4-3"><strong>4.3 Mandatory professional review.</strong> Before any Completed Form is signed, sent or relied on, the Physician must read every field and attached statement, correct anything inaccurate, confirm each statement reflects the Physician's own professional opinion and the patient's record, and verify any cited reference. Flags and checks in the Service are aids; the absence of a flag does not mean a field is correct.</p>
+<p id="section-4-4"><strong>4.4 Decisions remain human.</strong> The Service does not make decisions about patients or any other individual. Whether to complete a form, what it says, and whether to sign and submit it are always the Physician's decisions.</p>
+<p id="section-4-5"><strong>4.5 Telling patients.</strong> You are responsible for deciding whether and how to tell patients, and the recipients of your reports, that you used AI-assisted software to prepare a document, in line with your regulatory authority's guidance and any applicable law. Some regulatory authorities require a physician to identify who assisted in preparing a third-party report; you are responsible for meeting that requirement.</p>
+<p id="section-4-6"><strong>4.6 Changes to models and providers.</strong> We may change the AI models, providers, prompts and checks we use, and the Service may switch automatically to another model from the same provider while the usual model is unavailable. We will update our Privacy Policy, and give notice under section 13.1 where the change affects how Health Information is handled.</p>
+<p id="section-4-7"><strong>4.7 No model training on your information.</strong> We do not use Clinical Content, Patient Details or other Health Information to train AI models, and our agreements with our AI providers do not allow them to do so. Schedule A sets out what we may do with De-identified Data.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-5-h" class="doc-sec" id="section-5"><h2 id="section-5-h">5. Your responsibilities</h2>
+<p id="section-5-1"><strong>5.1 Authority to use information.</strong> You confirm that you are, or act for, the Custodian of any Health Information you enter, and that you have the authority, and any patient consent that Privacy Law requires (including, where a patient lacks capacity, the consent of the appropriate substitute decision-maker), to use that information to prepare the document and to disclose the Completed Form to its recipient. If the Custodian is an institution or organization other than you, such as a hospital or a clinic corporation, you confirm that it has authorized you to bind it to these Terms and Schedule A; if it has not, you will not enter its Health Information. Disclosing a Completed Form to an insurer, program or other third party is your act, not ours.</p>
+<p id="section-5-2"><strong>5.2 De-identify Clinical Content before you enter it.</strong> The drafting step is designed for de-identified information. Before you paste or type Clinical Content, you will remove:</p>
+<ul>
+<li>names of the patient and of any other person (relatives, caregivers, other clinicians);</li>
+<li>dates of birth, health card and insurance numbers, chart and file numbers, social insurance numbers, and passport numbers;</li>
+<li>addresses, postal codes, telephone numbers and email addresses; and</li>
+<li>any other detail that could reasonably identify the patient in context, such as an exact date, an employer, or a rare condition combined with a small community.</li>
+</ul>
+<p id="section-5-3"><strong>5.3 The identifier check is a safety net.</strong> Before your clinical notes are sent for drafting, the Service checks the notes box for common identifier patterns and warns you if it finds any. It does not check other fields, it can miss identifiers, and it can flag text that is not identifying. You will remove anything it correctly flags, keep identifiers out of every other field used for drafting, and continue past a warning only if you are satisfied the flagged text does not identify anyone. If identifying information reaches us, we handle it as Customer Personal Information under Schedule A, but you remain responsible for having entered it.</p>
+<p id="section-5-4"><strong>5.4 Patient Details.</strong> Enter Patient Details only in the fields provided for them, not in Clinical Content. Patient Details are sent to our servers only to fill the document you download; they are not sent to our AI provider, and our servers do not keep them. For visa letters, visitors' passport details are entered in the letter itself and are never sent to the AI provider. Patient Details that are part of a Draft you save are stored with the Draft until it is deleted. Some details you enter, such as a file reference, are kept in your browser on that device so you can find your downloads; you are responsible for securing that device.</p>
+<p id="section-5-5"><strong>5.5 Only what the form needs.</strong> You will enter only the information reasonably necessary to complete the document.</p>
+<p id="section-5-6"><strong>5.6 Professional obligations.</strong> You remain solely responsible for meeting your professional, ethical and legal obligations, including your regulatory authority's standards for third-party reports and forms, medical records, uninsured services and fees, confidentiality, and the use of AI. In particular: where your regulatory authority requires a report to identify anyone who helped prepare it, you will identify Delegates who prepare forms; you will obtain any express consent required before disclosing a Completed Form to a third party; you will complete reports within any time your regulatory authority sets; and you will tell the patient or payer your fee before providing an uninsured service. You are the author of every Completed Form you sign.</p>
+<p id="section-5-7"><strong>5.7 Uploads and messages.</strong> When you request a new form, upload only a blank form. Never upload a completed form or any document containing Patient Details. Do not include Health Information in feedback, support messages or form-request notes.</p>
+<p id="section-5-8"><strong>5.8 Tell us about mistakes.</strong> If you believe identifying information was entered or uploaded by mistake, tell us promptly at <a href="mailto:hello@formad.ca">hello@formad.ca</a>. We will delete what we hold where we can. Under our zero-data-retention arrangement, our AI provider does not store the content it receives after returning its response, except where the law requires it or where its automated safety systems flag a request, in which case it may keep that request and response for up to two years. We cannot delete content held by our AI provider.</p>
+<p id="section-5-9"><strong>5.9 Your own privacy obligations.</strong> As Custodian, you remain responsible for your own obligations under Privacy Law, including responding to patients' requests and notifying patients and regulators of privacy breaches. Schedule A sets out how we support you.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-6-h" class="doc-sec" id="section-6"><h2 id="section-6-h">6. Health information: who is responsible for what</h2>
+<p id="section-6-1"><strong>6.1 You are the Custodian; we act for you.</strong> You, your practice or the institution you act for is the Custodian of Health Information entered into the Service. To the extent we handle Health Information, we do so only on your behalf and on your instructions, as your agent, electronic service provider, information manager or service provider (whichever term applicable Privacy Law uses), and only as Schedule A allows. We are not the Custodian of any patient's records.</p>
+<p id="section-6-2"><strong>6.2 Information about you.</strong> We are responsible, as an organization, for the personal information we collect about you and your Delegates to run our business: account and Profile details, verification, plan and billing information, usage records, feedback and support messages. Our Privacy Policy describes how we handle it.</p>
+<p id="section-6-3"><strong>6.3 Quality Records and De-identified Data.</strong> If you authorize it in Schedule B, we will keep Quality Records and create De-identified Data on your behalf, as Schedule A, section A7 sets out. The authorization is optional: declining it does not affect your use of the Service, and you may withdraw it at any time. It is not available where section A7.7 says so. We will never attempt to re-identify anyone.</p>
+<p id="section-6-4"><strong>6.4 Schedule A is the required written agreement.</strong> Schedule A is intended to be the written agreement that Privacy Law requires between a Custodian and those who handle health information on its behalf, including under PHIPA and Ontario Regulation 329/04, section 66 of Alberta's <em>Health Information Act</em>, and the corresponding provisions of the other provinces and territories.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-7-h" class="doc-sec" id="section-7"><h2 id="section-7-h">7. Plans, fees and payment features</h2>
+<p id="section-7-1"><strong>7.1 Plans.</strong> Each account may complete a limited number of forms free of charge, as shown in the Service. After that, you need a paid plan: a monthly or annual subscription, which may include a number of forms and charge for additional ones, or a charge per form. Current plans, prices and any fair-use limits are shown in the Service. A form counts toward your plan when a Completed Form is first downloaded; downloading the same form again in the same session does not count. Invoices do not count toward your plan.</p>
+<p id="section-7-2"><strong>7.2 Billing.</strong> Plans are billed through Stripe. Subscriptions renew automatically at the end of each period until you cancel. You can cancel at any time, effective at the end of the current period, from the billing page. Charges for additional forms are billed monthly in arrears, including on annual plans. Prices are in Canadian dollars. The prices we show include every mandatory fee except applicable taxes, which we add where the law requires. We may offer promotional codes or complimentary access at our discretion.</p>
+<p id="section-7-3"><strong>7.3 Price changes.</strong> We will give you at least 30 days' notice of a price increase, which will apply from your next renewal after the notice period.</p>
+<p id="section-7-4"><strong>7.4 Refunds.</strong> Fees are non-refundable except as these Terms provide or the law requires. We will refund any duplicate charge.</p>
+<p id="section-7-5"><strong>7.5 Unpaid amounts.</strong> If a payment fails, Stripe retries it on its usual schedule. If it remains unpaid, your paid plan ends and your account returns to the free allowance until you pay or choose a new plan. If our billing checks are unavailable and you download forms in the meantime, we may bill those forms afterwards under your plan.</p>
+<p id="section-7-6"><strong>7.6 Payment Features.</strong> Where we have enabled them for your account, Payment Features let you prepare invoices for your uninsured services, such as form-completion fees, and accept online card payments through Stripe. Features we label "preview" may change or end, and are provided as is.</p>
+<ul>
+<li><strong>You are the seller.</strong> You set your fees and are the merchant of record for every invoice. You are responsible for: making sure your fees and billing practices meet your regulatory authority's policies on uninsured services, including telling patients about fees in advance; collecting and remitting any tax on your fees; receipts; and refunds and disputes with patients and payers. We are not a party to your arrangements with patients or payers, and we do not collect debts.</li>
+<li><strong>Stripe.</strong> Online payments are processed by Stripe under Stripe's Connected Account Agreement, which you must accept. Stripe verifies your identity, processes payments with you as the merchant of record and pays them out to your Stripe account. We can see payment details for your invoices in our Stripe platform account, and we use them only as Schedule A permits.</li>
+<li><strong>Identifying who acts for you.</strong> Invoices, payment pages and receipts name you as the seller and state that forMaD and Stripe act on your behalf. Descriptions sent to Stripe and shown to payers are generic, such as "Medical form completion", and do not name a drug, condition or program.</li>
+<li><strong>Patient details and payment links.</strong> Patient details you add to an invoice are used in your browser to build it and are not sent to us. Send payment links only to the person responsible for paying: anyone with the link can see your name and the invoice number, amount, dates and status.</li>
+<li><strong>Platform fee.</strong> For each invoice issued through the Service that is paid or deemed paid, you will pay forMaD a platform fee for its invoicing and billing services, calculated as the percentage of the invoice amount (before tax), subject to the per-invoice minimum and maximum, shown in the Service before you issue the invoice. For payments made online through the Service, the fee is deducted from the payment and covers Stripe's processing charges. For any other invoice, the fee becomes payable, and is added to your next statement, on the earliest of: (a) the day the invoice is marked paid; (b) the day it is still unpaid 30 days after its due date, when it is deemed paid; and (c) the day your account closes or you stop using Payment Features, for every invoice then unpaid. No platform fee applies to an invoice you void before its fee becomes payable, or to one you mark paid by mistake and correct within 24 hours, and we refund the fee if a payment is fully refunded. We may, at our discretion, cancel the fee on an invoice deemed paid that you confirm in writing was never paid and has been written off. We will give you at least 30 days' notice of any change to the platform fee.</li>
+<li><strong>Nature of the fee.</strong> The platform fee pays for administrative invoicing and billing services, in the way a billing agency's fee does. forMaD does not refer patients or payers to you, does not set or influence your fees, and does not receive from any payer, insurer or manufacturer any payment that depends on the invoices you issue or the forms you complete.</li>
+<li><strong>Fee integrity.</strong> You will not void, mark unpaid, re-issue outside the Service or otherwise record an invoice inaccurately in order to avoid or reduce a platform fee. If you do, or if an invoice is voided after the payer has paid it, the platform fee is payable as if the invoice had been paid, and we may suspend Payment Features. To enforce this section we may review your invoice activity, such as voided, unpaid and past-due invoices; that review uses invoice amounts, dates and statuses, not patient information.</li>
+<li><strong>Statements and payment.</strong> Platform fees on invoices not paid online are totalled twice a month and shown in the Service. Each statement is payable within 15 days of its date. If you have a payment method on file, you authorize us to charge it for each statement when it is issued. If a statement is unpaid when due, we may suspend Payment Features or the Service after notice. Platform fees that became payable before your account closed, including under (c) above, remain payable after it closes.</li>
+<li><strong>Refunds, disputes and reversals.</strong> You are responsible for refunds, chargebacks, disputes and payment reversals on your invoices. You authorize us and Stripe to recover from your Stripe balance any refunded or disputed amount, and related Stripe fees, that Stripe debits from our platform account, by reversing the corresponding transfer or otherwise as Stripe's terms allow.</li>
+<li><strong>Insured services and surcharges.</strong> You will not use Payment Features to charge anyone for an insured service or any amount your province's health insurance legislation prohibits, and you will not add a card surcharge where the law or card network rules prohibit it.</li>
+<li><strong>Our fees and tax.</strong> Our fees exclude applicable taxes, which we add where the law requires.</li>
+</ul>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-8-h" class="doc-sec" id="section-8"><h2 id="section-8-h">8. Acceptable use</h2>
+<p>You will not, and will not allow anyone else to:</p>
+<ol type="1">
+<li>use the Service unlawfully, or in breach of your professional obligations or Privacy Law;</li>
+<li>prepare a document you know or ought to know is false, misleading or exaggerated, or use the Service to support a fraudulent or improper claim, application or enrolment;</li>
+<li>prepare a document about a patient whom the signing Physician has not assessed where the document requires that assessment, or in the name of a Physician who has not authorized it;</li>
+<li>enter or upload information you are not authorized to use, or Health Information beyond what this agreement permits;</li>
+<li>share sign-in codes or accounts, or give access to anyone other than an authorized Delegate;</li>
+<li>circumvent or test the security of the Service, its identifier checks, its plan limits or its access controls, except under a written agreement with us;</li>
+<li>scrape, copy or extract the Service's prompts, templates, form mappings, criteria or other content, or access the Service by automated means other than those we provide;</li>
+<li>use the Service, or Output obtained from it, to build or train a product that competes with the Service (this does not restrict your use of Completed Forms in your practice or medical record);</li>
+<li>reverse engineer the Service, except to the extent the law allows despite this restriction;</li>
+<li>upload malicious code, or interfere with or overload the Service; or</li>
+<li>resell, sublicense or provide the Service to third parties, or suggest that forMaD endorses you or your documents.</li>
+</ol>
+<p>If you find a security vulnerability, report it to <a href="mailto:hello@formad.ca">hello@formad.ca</a> and do not exploit or disclose it. We may investigate suspected breaches of this section and act under section 12.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-9-h" class="doc-sec" id="section-9"><h2 id="section-9-h">9. Intellectual property</h2>
+<p id="section-9-1"><strong>9.1 Ours.</strong> We and our licensors own the Service, including its software, prompts, templates, form mappings, criteria databases, compilation of the form library, design and trademarks. We grant you a limited, non-exclusive, non-transferable, revocable right to use the Service during your subscription for your own professional practice, in line with these Terms. We reserve all rights not expressly granted.</p>
+<p id="section-9-2"><strong>9.2 Yours.</strong> As between you and us, you (or the Custodian) own your Clinical Content, Profile and Completed Forms. We claim no ownership of Output once you incorporate it into a Completed Form, and you may use that Output for your practice. You grant us a non-exclusive licence to host, copy, transmit, process and display your content only as needed to provide the Service to you and as Schedule A permits.</p>
+<p id="section-9-3"><strong>9.3 Forms belong to their issuers.</strong> Forms in the library are the property of the organizations that issue them. We provide them so you can complete them for their intended purpose, and you will not use them otherwise.</p>
+<p id="section-9-4"><strong>9.4 Feedback and form requests.</strong> If you send us ideas or feedback, or upload a blank form with a form request, you grant us a perpetual, irrevocable, royalty-free, worldwide licence to use it to build and improve the Service, to the extent you have rights in it, without obligation to you. Do not include Health Information or confidential information.</p>
+<p id="section-9-5"><strong>9.5 Improvements and aggregate statistics.</strong> As between you and us, we own improvements we make to the Service and the aggregate statistics described in Schedule A, which contain no Health Information and do not identify you.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-10-h" class="doc-sec" id="section-10"><h2 id="section-10-h">10. Third-party forms, programs and services</h2>
+<p id="section-10-1"><strong>10.1 Third-party services.</strong> The Service relies on third parties, including hosting, database, email, AI, bibliographic and payment providers, listed in our Privacy Policy. Some features take you to a third party's own pages, such as Stripe's checkout and onboarding pages. Your use of those pages is governed by that third party's terms, and we are not responsible for third-party services we do not control.</p>
+<p id="section-10-2"><strong>10.2 Programs and manufacturers.</strong> Including a form, drug, program or manufacturer in our library is not an endorsement or a recommendation. We do not accept any payment or other benefit from a manufacturer, insurer, program sponsor or other organization that depends on the number of forms completed, enrolments, prescriptions, claims or invoices, and we do not pass any benefit from such an organization to you. If we receive any compensation from an organization in connection with its form or program (for example, a fixed fee to build or maintain a form), we will say so where the form appears. No such relationship gives that organization access to Customer Personal Information, Quality Records or information that identifies you, or influences how Output is generated.</p>
+<p id="section-10-3"><strong>10.3 Links.</strong> Links to third-party websites, registers or literature are provided for convenience. We do not control or endorse their content.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-11-h" class="doc-sec" id="section-11"><h2 id="section-11-h">11. Disclaimers, limitation of liability and indemnity</h2>
+<p id="section-11-1"><strong>11.1 Disclaimer.</strong> To the extent permitted by law, the Service and all Output are provided "as is" and "as available". We make no representation or warranty, express or implied, that the Service or any Output is accurate, complete, current, fit for a particular purpose, uninterrupted or error-free, or that any document will be accepted. Your professional review under section 4.3 is the control that makes a Completed Form accurate. Nothing in this section limits our obligations under Schedule A.</p>
+<p id="section-11-2"><strong>11.2 Excluded losses.</strong> To the extent permitted by law, neither party is liable to the other for indirect, incidental, special, consequential or punitive damages, for loss of profits, revenue or goodwill, or for the denial, delay or reversal of any claim, application, enrolment or funding request, even if told such losses were possible. The following are direct damages and are not excluded: the reasonable costs of notifying individuals and regulators of a breach of Customer Personal Information, of responding to a regulator's inquiry, and of restoring data, including reasonable legal fees for those things.</p>
+<p id="section-11-3"><strong>11.3 Caps.</strong> To the extent permitted by law, each party's total liability for all claims arising out of or relating to this agreement, including under sections 11.6 and 11.7, is limited to the greater of (a) the amounts you paid us under this agreement in the 12 months before the event giving rise to the first claim and (b) $1,000. For claims arising from our breach of Schedule A, or from a security incident affecting systems that we or our service providers control, our total liability is instead limited to the greater of (a) three times those amounts and (b) $25,000.</p>
+<p id="section-11-4"><strong>11.4 What we do not limit.</strong> Sections 11.2 and 11.3 do not limit amounts you owe us for the Service, liability for fraud, wilful misconduct or gross negligence, or any other liability that cannot be limited by law.</p>
+<p id="section-11-5"><strong>11.5 Professional liability protection.</strong> If you are a Physician, you will maintain professional liability protection appropriate to your practice, such as membership in the Canadian Medical Protective Association or equivalent coverage, for the whole time you use the Service.</p>
+<p id="section-11-6"><strong>11.6 Your indemnity.</strong> You will indemnify forMaD and its directors, officers and employees against damages and reasonable legal fees awarded against them, or paid in a settlement you approve, in a third-party claim, to the extent the claim arises from: (a) the contents of a Completed Form that you or your Delegates approved, or its submission by you or on your behalf; (b) information that you or your Delegates entered in breach of sections 5.2 to 5.7; (c) your or your Delegates' breach of this agreement, of Privacy Law or of your professional obligations; or (d) fees you charge, or your dealings with patients and payers. You are not responsible to the extent a claim results from our breach of this agreement (including Schedule A), our negligence or wilful misconduct, a defect in the Service (including an error in how the Service transfers your approved content or Patient Details into a document), or a security incident affecting systems that we or our service providers control. This indemnity does not extend to any fine or administrative monetary penalty imposed on forMaD.</p>
+<p id="section-11-7"><strong>11.7 Our indemnity.</strong> We will indemnify you and the Custodian against damages and reasonable legal fees awarded against you, or paid in a settlement we approve, and against your reasonable costs of notifying individuals and regulators and of responding to a regulator's inquiry, to the extent a third-party claim or regulatory proceeding arises from: (a) our breach of Schedule A; (b) a security incident affecting systems that we or our service providers control; or (c) a claim that the Service, as we provide it, infringes a Canadian intellectual property right.</p>
+<p id="section-11-8"><strong>11.8 How indemnities work.</strong> The party seeking indemnity will notify the other promptly (a delay relieves the other party only to the extent it is prejudiced), let the indemnifying party control the defence and settlement with counsel reasonably acceptable to the indemnified party, and cooperate reasonably at the indemnifying party's expense. No settlement may admit fault by, or impose an obligation on, the indemnified party without its consent. Nothing in this section requires a Physician to act contrary to the Physician's obligations to the Canadian Medical Protective Association or to the Physician's regulatory authority, or to waive privilege.</p>
+<p id="section-11-9"><strong>11.9 Time to bring claims.</strong> Where Ontario law applies, you and we agree, as parties to a business agreement under section 22(5) of the <em>Limitations Act, 2002</em>, that a proceeding for a claim arising out of this agreement must be started within one year after the day on which the claim was discovered within the meaning of section 5 of that Act. This does not apply to a claim for contribution or indemnity relating to a third-party claim or regulatory proceeding, to a claim arising from a breach of Schedule A, or where the law does not permit a limitation period to be varied by agreement.</p>
+<p id="section-11-10"><strong>11.10 Insurance.</strong> On request, we will tell you what insurance we carry.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-12-h" class="doc-sec" id="section-12"><h2 id="section-12-h">12. Suspension, termination and your data</h2>
+<p id="section-12-1"><strong>12.1 You may stop at any time.</strong> You may cancel a paid plan at any time from the billing page; cancellation takes effect at the end of the current billing period. You may ask us to close your account by writing to <a href="mailto:hello@formad.ca">hello@formad.ca</a>.</p>
+<p id="section-12-2"><strong>12.2 When we may suspend or end access.</strong> We may suspend or end access for an account, a Profile or a Delegate if: (a) we cannot verify a Physician, or a licence is suspended, revoked or restricted; (b) you breach this agreement; (c) access poses a risk to patients, to the security of the Service or to other users; (d) the law or a regulator requires it; or (e) amounts owing remain unpaid after Stripe's retry schedule. Where the reason can be cured, we will give you notice and at least 10 days to cure it, except where immediate action is needed to protect patients, the Service or other users, or to comply with the law. After any termination other than for a security reason, you will have 30 days of read-only access to export your Drafts.</p>
+<p id="section-12-3"><strong>12.3 If we discontinue the Service.</strong> We may discontinue the Service or a feature by giving at least 60 days' notice, except where the law, a security risk or a third-party provider's withdrawal makes that impossible. If we discontinue the whole Service, we will refund prepaid fees for the unused part of your billing period.</p>
+<p id="section-12-4"><strong>12.4 What happens to your information.</strong> We do not keep Completed Forms, so download and file everything you need before your account closes. When an account closes:</p>
+<ul>
+<li>Drafts are destroyed under Schedule A, section A10, after any export period, and Profiles are deleted within 90 days;</li>
+<li>other Customer Personal Information is returned or destroyed as Schedule A requires, and Quality Records are destroyed under section A7.2;</li>
+<li>other account information is deleted, or anonymized so that there is no serious possibility of identifying anyone, on the schedule in our Privacy Policy, except records we must keep by law (such as our own billing and tax records) and the record of your acceptance of these Terms; and</li>
+<li>De-identified Data that meets Schedule A, section A7.3, and Aggregate Statistics may be kept.</li>
+</ul>
+<p>Before your account closes, you may ask for a copy of the account information we hold about you, and we will provide it in a commonly used format within 30 days.</p>
+<p id="section-12-5"><strong>12.5 What survives.</strong> Sections 1.4, 1.5, 2.5 (for acts before termination), 3, 4.2 to 4.4, 5, 6, 7 (for amounts accrued), 9.2 to 9.5, 10, 11, 12.4, 12.5, 12.6 and 13, and Schedule A for as long as we hold Customer Personal Information, survive the end of this agreement.</p>
+<p id="section-12-6"><strong>12.6 Death or incapacity.</strong> If a Physician dies or becomes incapable, we will deal with the account and any Customer Personal Information on the instructions of the person who becomes custodian under Privacy Law, such as the estate trustee.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-13-h" class="doc-sec" id="section-13"><h2 id="section-13-h">13. Changes, governing law, language and general terms</h2>
+<p id="section-13-1"><strong>13.1 Changes to these Terms.</strong> We may change these Terms by posting a new version with its effective date. We will notify you by email and in the Service at least 30 days before any change takes effect that: (a) changes Schedule A or how Customer Personal Information is handled; (b) increases fees or changes the platform fee; (c) changes sections 6, 11 or 13; or (d) otherwise materially affects your rights. A change to Schedule A takes effect for your account only when you, or the Custodian, accept it in the Service; until then the version already accepted continues to apply, and if it is not accepted by its effective date we may end your access on 30 days' notice and refund prepaid fees for the unused period. If you do not accept any other material change, you may cancel before it takes effect and we will refund prepaid fees for the unused period. Changes that only correct errors, clarify wording or concern features you are free not to use take effect when posted. A change does not apply to a dispute that arose before it took effect.</p>
+<p id="section-13-2"><strong>13.2 Governing law.</strong> This agreement is governed by the laws of Ontario and the federal laws of Canada that apply there. This does not take away the protection of any law of your province that cannot be excluded by agreement, including the Privacy Law that applies to you as Custodian.</p>
+<p id="section-13-3"><strong>13.3 Disputes.</strong> Before starting a proceeding, a party will give the other written notice of the dispute, and both will try in good faith to resolve it within 30 days. After that, either party may start a proceeding in the courts of Ontario sitting in Toronto, and you may instead start one in the courts of the province where you practise. Either party may bring a claim for contribution or indemnity in a proceeding a third party has started in another court, and either party may seek urgent injunctive relief in any competent court to protect confidential information, intellectual property or the security of the Service. Nothing in this agreement limits anyone's right to complain to, or cooperate with, a privacy commissioner, a regulatory authority or any other public body.</p>
+<p id="section-13-4"><strong>13.4 Language.</strong> These Terms are drawn up in English at the express request of the parties. The Service is not currently offered in Quebec; before it is, we will make a French version available.</p>
+<p id="section-13-5"><strong>13.5 Notices.</strong> We may send notices to the email address on your account or through the Service. Send notices to us at <a href="mailto:hello@formad.ca">hello@formad.ca</a>; for privacy matters, write "Attention: Privacy Officer" in the subject.</p>
+<p id="section-13-6"><strong>13.6 Assignment.</strong> You may not assign this agreement without our written consent. We may assign it to an affiliate or to a successor in a merger, acquisition or sale of all or substantially all of our business, if the successor agrees in writing to be bound by it, including Schedule A, and we notify you. Customer Personal Information is never disclosed to a prospective buyer or financing party before a transaction closes.</p>
+<p id="section-13-7"><strong>13.7 Events beyond our control.</strong> We are not responsible for delay or failure caused by events beyond our reasonable control, including outages of internet, hosting or AI providers, provided we take reasonable steps to limit the effect. This does not excuse our obligation to notify you of a breach or our safeguards obligations under Schedule A.</p>
+<p id="section-13-8"><strong>13.8 General.</strong> This agreement is the entire agreement between us about the Service and replaces any earlier agreement or understanding. If a court finds any provision unenforceable, it will be enforced to the maximum extent permitted and the rest of the agreement remains in effect. A failure to enforce a provision is not a waiver. We are independent contractors; nothing in this agreement creates a partnership or employment relationship, or makes us your agent except as Schedule A provides for Health Information. No one other than you and us has rights under this agreement. Electronic acceptance and electronic records of this agreement are as valid as signed paper. On request, we will provide these Terms and our Privacy Policy in an accessible format or with communication supports.</p>
+<p id="section-13-9"><strong>13.9 Contact.</strong> forMaD Health Inc., Toronto, Ontario; <a href="mailto:hello@formad.ca">hello@formad.ca</a>.</p>
+<p id="section-13-10"><strong>13.10 Confidentiality.</strong> Each party will keep confidential, and use only to perform this agreement, the other party's non-public information received under this agreement that is marked or would reasonably be understood as confidential, including your fees, invoices, payment data and usage, and our prompts, templates, form mappings and security information. This does not apply to information that is or becomes public through no fault of the receiving party, that the receiving party already lawfully knew, or that it develops independently. A party may disclose confidential information where the law requires, after giving notice where lawful. Schedule A, not this section, governs Customer Personal Information.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="schedule-a-h" class="doc-sec" id="schedule-a"><h2 id="schedule-a-h">Schedule A: Health Information Processing Schedule</h2>
+<p id="a1"><strong>A1. Status and scope.</strong> This Schedule is the written agreement between you, as Custodian, and forMaD for handling information on your behalf. It applies to all Health Information, and all other personal information about patients or other individuals (such as caregivers, visitors named in letters, and payers), that forMaD receives or holds on your behalf in providing the Service (together, "Customer Personal Information"), whether or not you meant to de-identify it. That includes Clinical Content containing identifiers, Drafts, Quality Records, Patient Details while they pass through our servers, and records of payments of your invoices. This Schedule prevails over the rest of the Terms. We offer the Service to Physicians practising in Ontario, Alberta, British Columbia, Saskatchewan, Manitoba, New Brunswick, Nova Scotia and Newfoundland and Labrador, and this Schedule is intended to meet the requirements for agreements with agents, electronic service providers, information managers and service providers under: PHIPA and Ontario Regulation 329/04; section 66 of Alberta's <em>Health Information Act</em> and its <em>Health Information Regulation</em>; section 18 of Saskatchewan's <em>Health Information Protection Act</em>; section 25 of Manitoba's <em>Personal Health Information Act</em>; section 52 of New Brunswick's <em>Personal Health Information Privacy and Access Act</em>; section 22 of Newfoundland and Labrador's <em>Personal Health Information Act</em>; section 28 of Nova Scotia's <em>Personal Health Information Act</em>; and British Columbia's <em>Personal Information Protection Act</em>.</p>
+<p id="a2"><strong>A2. Roles and instructions.</strong> You retain custody and control of Customer Personal Information. forMaD acts only on your behalf: as your agent in Ontario and Nova Scotia, your information manager or information management service provider in Alberta, Saskatchewan, Manitoba, New Brunswick and Newfoundland and Labrador, and your service provider in British Columbia. Your instructions are these Terms and your use of the Service's features. We also accept, as minimum standards, the restrictions that Ontario Regulation 329/04 places on electronic service providers, except that we may disclose information to service providers under A5 who agree to comply with those restrictions, and as A8A allows.</p>
+<p id="a3"><strong>A3. Objectives and permitted purposes.</strong> The objective is to let you prepare administrative documents efficiently while protecting patients' privacy. We will collect, use, retain and disclose Customer Personal Information only as needed to:</p>
+<ol type="1">
+<li>generate the draft content and checks you request;</li>
+<li>fill the documents you download and return them to you;</li>
+<li>keep Drafts you save until they are deleted;</li>
+<li>keep records of your invoices and process their payment, where you have turned on Payment Features;</li>
+<li>secure the Service, prevent misuse and fix problems;</li>
+<li>keep Quality Records and create De-identified Data under A7, if you have authorized it; and</li>
+<li>respond to legal demands under A8A.</li>
+</ol>
+<p>We will not use Customer Personal Information for any other purpose, sell it, use it for marketing, or use it to train AI models, and we will not allow our service providers to do so.</p>
+<p id="a4"><strong>A4. Safeguards.</strong> We will protect Customer Personal Information with administrative, technical and physical safeguards appropriate to the sensitivity of health information, including those described in our Privacy Policy. In particular:</p>
+<ul>
+<li>everyone working for us who could access Customer Personal Information has signed a confidentiality undertaking and received privacy training, and we will give you a copy of our standard undertaking on request;</li>
+<li>our staff and contractors do not view Drafts except to provide support you ask for, to investigate a security incident, or to comply with the law; named staff may view Quality Records only for the purposes in A7; and we log all such access and give you the log for your account on request;</li>
+<li>we store Customer Personal Information in Canada, except as A6 describes; and</li>
+<li>we maintain a privacy impact assessment and a threat and risk assessment of the Service, and update them when the Service changes materially.</li>
+</ul>
+<p id="a5"><strong>A5. Service providers.</strong> Annex A-1 is the table of service providers in section 6 of our Privacy Policy as it stands when you accept this Schedule, as later changed under this section. It lists every service provider that receives Customer Personal Information, what it receives, why, and where it processes it; by accepting this Schedule, you authorize their use. Each is bound by a written agreement that: (a) limits its use of the information to providing services to us; (b) prohibits using it to train AI models; (c) requires safeguards appropriate to the sensitivity of health information; (d) requires it to notify us of security incidents without undue delay; and (e) requires it to delete or return the information when its services end. Stripe processes payments under its own agreement with you and its own privacy policy, and is not our service provider for that purpose. We will give you at least 30 days' written notice before adding or replacing a service provider that will receive Customer Personal Information. If you object on reasonable privacy grounds, you may end your subscription before the change takes effect, and we will refund prepaid fees for the unused period. We remain responsible to you for our service providers' performance of these obligations.</p>
+<p id="a6"><strong>A6. Location and privacy impact assessments.</strong> Our servers and database are in Canada. Clinical Content, and any identifiers it contains, is sent to our AI provider, which processes it only in the United States. Some email and payment processing takes place in the United States, as Annex A-1 describes. Information processed outside Canada may be accessed by foreign courts and authorities under their laws. We maintain a privacy impact assessment package for Custodians, including a description of the Service and its data flows, Annex A-1, our safeguards, a summary of our threat and risk assessment, and templates for Ontario and for Alberta (for submission to the Information and Privacy Commissioner under section 64 of the <em>Health Information Act</em>). We provide it on request before you accept this Schedule and keep it current. Before entering Customer Personal Information, you will complete any privacy impact assessment your law requires.</p>
+<p id="a7"><strong>A7. Quality Records and De-identified Data (only with your authorization).</strong></p>
+<ul>
+<li id="a7-1"><strong>A7.1 Instruction.</strong> If you authorize it in Schedule B, you instruct us, as your agent and on your behalf, to keep Quality Records of forms completed in your account; to use them to check the accuracy and safety of drafts prepared for you and to notify you of errors under A12; and to de-identify them under A7.3.</li>
+<li id="a7-2"><strong>A7.2 Quality Records are Customer Personal Information.</strong> We keep them only in Canada. Access is limited to named staff who need it for A7.1, and every access is logged. We disclose them to no one other than our service providers under A5. We destroy them at the earliest of 12 months after creation, 30 days after your account closes, and 30 days after you withdraw your authorization.</li>
+<li id="a7-3"><strong>A7.3 De-identification standard.</strong> We use information for our own purposes (evaluating and improving the Service and producing Aggregate Statistics) only after it has been de-identified using a documented method that: (a) removes all direct identifiers and all fields intended for personal details, including the names and licence numbers of other clinicians; (b) removes or generalizes free text that could identify an individual in context; (c) has been assessed by a person qualified in de-identification as presenting a very low risk of re-identification in the setting where it will be used; and (d) is reassessed at least annually and whenever the method or data changes materially. Until then, the information remains a Quality Record.</li>
+<li id="a7-4"><strong>A7.4 No re-identification, linkage or sale.</strong> We will never attempt to re-identify any individual, link De-identified Data with other data, sell it, or disclose it except as Aggregate Statistics. We will bind every recipient of Aggregate Statistics by contract not to attempt re-identification or linkage.</li>
+<li id="a7-5"><strong>A7.5 No AI training.</strong> We will not use Quality Records or De-identified Data to train or fine-tune any AI model, ours or a third party's. Any such use would require a new, separate written authorization from you; silence or continued use is not authorization.</li>
+<li id="a7-6"><strong>A7.6 Your public statement and consent.</strong> You will describe this de-identification and its purposes in your written public statement of information practices or privacy notice, as your law requires (in Ontario, PHIPA section 16), and obtain any patient consent your law or regulatory authority requires. We will give you model wording on request.</li>
+<li id="a7-7"><strong>A7.7 Saskatchewan.</strong> The authorization cannot be given for Customer Personal Information subject to Saskatchewan's <em>Health Information Protection Act</em> until we notify you that our method meets that Act. Until then, no Quality Records are created for those accounts.</li>
+</ul>
+<p id="a8"><strong>A8. Breaches.</strong> We will notify you without undue delay, and in any event within 72 hours, after we become aware of: (a) any theft, loss, or unauthorized access, use, disclosure, copying, modification or disposal of Customer Personal Information; (b) any attempt to do any of those things that we reasonably believe could have succeeded; or (c) any breach by us or our service providers of an obligation in this Schedule relating to confidentiality. Our notice will give, as far as then known: what happened and when, and how it was discovered; the information involved and the number of individuals affected; the Physicians and accounts affected; the steps taken to contain the incident and reduce harm; and a contact person. We will update you as we learn more, keep a record of the incident, and cooperate with your investigation and with any investigation by a privacy commissioner. We will not notify your patients or your regulator about your information without consulting you, unless the law requires it.</p>
+<p id="a8a"><strong>A8A. Demands for disclosure.</strong> If a court, government authority or other person, in or outside Canada, requires or asks us to disclose Customer Personal Information, we will, unless the law prohibits it: promptly notify you and refer the demand to you; disclose nothing unless legally compelled; seek to narrow or challenge any demand we reasonably consider overbroad or inconsistent with Canadian law; and disclose only the minimum required. To the extent permitted, we will tell you what was disclosed.</p>
+<p id="a9"><strong>A9. Requests from individuals.</strong> If a patient or other individual asks us for access to or correction of Customer Personal Information, or expresses wishes about its use or disclosure, we will refer the request to you within 5 business days, help you respond, and not respond directly unless the law requires it. You will not enter information that a patient has asked you not to use or disclose for this purpose.</p>
+<p id="a10"><strong>A10. Retention, return and destruction.</strong> Drafts are deleted 45 days after they were last saved or finished, or earlier when you delete them. Patient Details sent to fill a document are discarded once the document is produced; Patient Details saved in a Draft are deleted with the Draft. Quality Records are destroyed under A7.2. When your account closes, or at your written request at any time, we will return to you, free of charge and in a commonly used format, any Customer Personal Information you ask for, then destroy the Customer Personal Information we hold for you within 30 days and confirm that in writing. Backup copies are destroyed in the normal backup cycle and are not restored in the meantime except to recover from a system failure. The only invoice records we keep for our own purposes are our fee records (invoice number, date and platform fee), which we keep as tax law requires.</p>
+<p id="a11"><strong>A11. Audit and verification.</strong> We will answer your reasonable written privacy and security questions within 30 days, and give you the documents reasonably needed to verify our compliance with this Schedule, including current summaries of our privacy impact assessment and threat and risk assessment, Annex A-1 and our standard confidentiality undertaking. In addition, on 30 days' written notice (or less after a breach or where a regulator requires it), you, or an independent auditor you appoint who is bound by confidentiality, may verify our compliance, including by reviewing relevant records and interviewing relevant personnel, during business hours and without exposing other customers' information. Verifications other than after a breach are limited to one in any 12 months. Each party bears its own costs unless the verification reveals a material breach by us. Delegate activity records for your account are available in the Service.</p>
+<p id="a12"><strong>A12. AI-specific commitments.</strong> The Service does not make decisions about patients; all Output is a draft for your review. We will tell you, through the Service or by email, about any material change to the AI models or providers that process Customer Personal Information (other than a temporary switch to another model from the same provider while the usual model is unavailable), and about any material accuracy problem we identify that affects a form you use.</p>
+<p id="a13"><strong>A13. Your responsibilities as Custodian.</strong> You will: complete any privacy impact assessment your law requires (for example, submitting one to Alberta's Information and Privacy Commissioner under section 64 of the <em>Health Information Act</em>); describe your use of an AI-assisted administrative service provider in your public statement of information practices or privacy notice; obtain any patient consent your law or regulatory authority requires; follow section 5 of the Terms; ensure your Delegates are bound by confidentiality and remove their access promptly when they leave; and tell us promptly of any instruction that changes how we may handle Customer Personal Information.</p>
+<p id="a14"><strong>A14. Provincial provisions.</strong></p>
+<ul>
+<li><strong>Alberta.</strong> For Custodians subject to the <em>Health Information Act</em>: (a) the objective is in A3, and the guiding principles are that we collect, use and disclose only the least amount of health information, with the highest degree of anonymity, needed for each purpose, and only on a need-to-know basis; (b) we collect health information only from you and your Delegates, through the Service, and not from any other custodian or person; (c) we use the health information described in A1 only for the purposes in A3; (d) we disclose it only to the service providers in Annex A-1, for the purposes stated there, and as required by law under A8A; (e) access, correction and expressed-wishes requests are handled under A9; (f) protection, management, return and destruction are governed by A4, A5 and A10; (g) this agreement may be ended under section 12 of the Terms and A15; (h) we store and use health information outside Alberta, you retain control of it, this Schedule addresses the risks, we will maintain the safeguards in A4, and you may monitor our compliance under A11; and (i) we will comply with the Act, its regulations and this agreement, and notify you as soon as practicable of any loss of, or unauthorized access to or disclosure of, health information so that you can meet your obligations under section 60.1 of the Act.</li>
+<li><strong>Saskatchewan.</strong> This agreement is entered into before you provide any information to us and governs its access, use, disclosure, storage, archiving, modification and destruction.</li>
+<li><strong>Manitoba, New Brunswick, Newfoundland and Labrador, Nova Scotia.</strong> We will protect, retain and destroy the information in accordance with the requirements that the applicable Act and regulations impose on you as trustee or custodian, and use and disclose it only as this Schedule permits.</li>
+</ul>
+<p id="a15"><strong>A15. Term.</strong> This Schedule applies for as long as we hold Customer Personal Information for you, including after your account closes.</p>
+<p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="schedule-b-h" class="doc-sec" id="schedule-b"><h2 id="schedule-b-h">Schedule B: Enrollment acknowledgements</h2>
+<p>At enrollment, and again when we ask you to accept a material change, you will see the following as separate check boxes, none ticked in advance. No Health Information may be entered for a Physician until that Physician has ticked the Physician boxes. We record each acknowledgement, with who gave it, the date and the version of the documents.</p>
+<p><strong>Physicians (required)</strong></p>
+<ul class="checklist">
+<li><span class="box">☐</span><span>I confirm that I am a Physician licensed to practise in the province where my practice is located, which is a province where the Service is offered, and I agree to the forMaD Terms of Service and, as or on behalf of the Custodian, to Schedule A.</span></li>
+</ul>
+<p><strong>Delegates (required)</strong></p>
+<ul class="checklist">
+<li><span class="box">☐</span><span>I confirm that a Physician has authorized me to act for them, and I agree to the forMaD Terms of Service. I understand that Schedule A applies between forMaD and the Custodian I act for.</span></li>
+</ul>
+<p><strong>Everyone (required)</strong></p>
+<ul class="checklist">
+<li><span class="box">☐</span><span>I have read the Privacy Policy, which explains how forMaD handles my personal information, including that some of it is processed by service providers in the United States.</span></li>
+<li><span class="box">☐</span><span>I will remove patient identifiers from clinical notes before entering them, I will review and verify every field of AI-generated content before any form is signed or submitted, and I understand that the Physician who signs a form is responsible for it.</span></li>
+</ul>
+<p><strong>Physicians (optional)</strong></p>
+<ul class="checklist">
+<li><span class="box">☐</span><span>On behalf of the Custodian, I authorize forMaD to keep Quality Records and create De-identified Data as described in section A7 of Schedule A and section 4.4 of the Privacy Policy. I understand I can decline this, or withdraw it later, without affecting my use of forMaD.</span></li>
+</ul>
+<p class="to-top"><a href="#top">Back to top</a></p></section></article>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="34" height="26" viewBox="8 33 98 54" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g transform="translate(13.58,60)">
+        <path d="M-0.00 -26.00 L 26.00 -0.00 L 0.00 26.00 L -4.77 21.23 L 16.47 -0.00 L -4.77 -21.23 Z" fill="#FF6B6B"/>
+        <path d="M33.09 -26.00 L 59.09 -0.00 L 33.09 26.00 L 28.33 21.23 L 49.56 -0.00 L 28.33 -21.23 Z" fill="#FF6B6B" opacity="0.55"/>
+        <path d="M66.19 -26.00 L 92.19 -0.00 L 66.19 26.00 L 61.42 21.23 L 82.65 -0.00 L 61.42 -21.23 Z" fill="#FF6B6B" opacity="0.28"/>
+      </g>
+        </svg>
+        <span class="footer-wm">for<em class="wm">M</em>a<em class="wm">D</em></span>
+      </div>
+      <div class="footer-tag">
+        Physicians practice medicine.<br>
+        for<em class="wm">M</em>a<em class="wm">D</em> handles the forms.<br><br>
+        formad.ca
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h2>Product</h2>
+        <a href="/#how">How it works</a>
+        <a href="/#forms">Form library</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#early-access">Early access</a>
+      </div>
+      <div class="footer-col">
+        <h2>Company</h2>
+        <a href="mailto:hello@formad.ca">hello@formad.ca</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms" aria-current="page">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      forMaD is a personal productivity tool for physicians. Not owned by any healthcare organization, hospital, or insurer. AI-generated content must be reviewed and verified by the treating physician before submission. The treating physician remains solely responsible for the accuracy of submitted documentation. forMaD is designed so patient identifying information never reaches the AI. Built for Canadian health privacy law: our servers and database are in Canada, and our AI provider keeps nothing after replying. Notes are not used to train AI models.
+    </div>
+    <div class="footer-corp">&copy; 2026 for<em class="wm">M</em>a<em class="wm">D</em> Health Inc.</div>
+  </div>
+</footer>
+
+</body>
+</html>
