@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>forMaD — Physicians practice medicine. forMaD handles the forms.</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%231C1C2E%22%2F%3E%3Cg%20transform%3D%22translate%2822.9%2C50%29%20scale%280.62%29%22%3E%3Cpath%20d%3D%22M0%20-26%20L26%200%20L0%2026%20L-4.77%2021.23%20L16.47%200%20L-4.77%20-21.23%20Z%22%20fill%3D%22%23FF6B6B%22%2F%3E%3Cpath%20d%3D%22M33.09%20-26%20L59.09%200%20L33.09%2026%20L28.33%2021.23%20L49.56%200%20L28.33%20-21.23%20Z%22%20fill%3D%22%23FF6B6B%22%20opacity%3D%220.55%22%2F%3E%3Cpath%20d%3D%22M66.19%20-26%20L92.19%200%20L66.19%2026%20L61.42%2021.23%20L82.65%200%20L61.42%20-21.23%20Z%22%20fill%3D%22%23FF6B6B%22%20opacity%3D%220.28%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
-  <meta name="description" content="AI-assisted prior authorization and medical form completion for Canadian specialist physicians. 300+ forms, every insurer, every specialty.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="AI-assisted prior authorization and medical form completion for Canadian specialist physicians. A growing library of insurance, government and drug-access forms.">
+  <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -838,7 +837,7 @@
     </div>
   </div>
 
-  <p class="fp-caption">One example. forMaD covers 300+ forms across every specialty and insurer &mdash; <a href="#forms">see the library</a>.</p>
+  <p class="fp-caption">One example from a growing library of insurance, government and drug-access forms &mdash; <a href="#forms">see the library</a>.</p>
 
   <!-- ROLLING FORM EXAMPLES -->
   <div class="ticker" aria-hidden="true">
@@ -946,7 +945,7 @@
             Just the clinical story: diagnosis, disease state, prior treatments, rationale.
             forMaD knows which evidence to pull, which insurer criteria apply, and what makes this case compelling to reviewers.
           </p>
-          <span class="step-pill">Notes processed in a PHI-secured environment</span>
+          <span class="step-pill">Built for Canadian health privacy law</span>
         </div>
       </div>
 
@@ -957,7 +956,7 @@
           <p class="step-desc">
             forMaD generates a complete, evidence-based form with real trial citations,
             specific stopping criteria, and proper dosing references.
-            <strong>You review every field. You fill in the patient details by hand. You sign.</strong>
+            <strong>You review every field. You add the patient details at the very end. You sign.</strong>
             The form is yours. We handled the writing.
           </p>
           <span class="step-pill">Physician reviews and signs everything</span>
@@ -976,7 +975,7 @@
         <span class="eyebrow">Built around one rule</span>
         <h2 class="privacy-h2">The AI never learns who your patient is.</h2>
         <p class="privacy-lead">
-          This is not a compliance add-on. It is the design. Patient names, dates of birth, and health card numbers stay on paper, where they belong. The AI gets the clinical story. You keep the identity.
+          This is not a compliance add-on. It is the design. Patient names, dates of birth, and health card numbers are added at the very end, used only to fill your PDF, and never sent to the AI. The AI gets the clinical story. You keep the identity.
         </p>
         <div class="privacy-pillars">
           <div class="pillar">
@@ -990,21 +989,21 @@
             <div class="pillar-dot"></div>
             <div>
               <strong>Your data stays private</strong>
-              <span>Your notes are processed in a PHI-secured environment, adhering to HIPAA and PHIPA standards. They are never used to train any AI model.</span>
+              <span>Built for Canadian health privacy law: our servers and database are in Canada, and our AI provider keeps nothing after replying. Your notes are never used to train any AI model.</span>
             </div>
           </div>
           <div class="pillar">
             <div class="pillar-dot"></div>
             <div>
-              <strong>Nothing retained after your session</strong>
-              <span>No clinical data is stored by forMaD. When you close the browser, it is gone.</span>
+              <strong>Notes are never stored</strong>
+              <span>Notes are never stored. Drafts you choose to save are deleted 45 days after you last save or finish them.</span>
             </div>
           </div>
           <div class="pillar">
             <div class="pillar-dot"></div>
             <div>
               <strong>You sign everything</strong>
-              <span>forMaD drafts. You review. You complete the patient details by hand. You submit. The clinical judgment is always yours.</span>
+              <span>forMaD drafts. You review. You add the patient details at the final step. You submit. The clinical judgment is always yours.</span>
             </div>
           </div>
         </div>
@@ -1014,7 +1013,7 @@
         <div class="phi-title">What goes where</div>
         <div class="phi-cols">
           <div class="phi-col yours">
-            <h4>Stays with you</h4>
+            <h4>Never sent to the AI</h4>
             <div class="phi-item stays">Patient name</div>
             <div class="phi-item stays">Date of birth</div>
             <div class="phi-item stays">Health card number</div>
@@ -1033,7 +1032,7 @@
           </div>
         </div>
         <div class="phi-note">
-          <strong>The result:</strong> a complete, compelling form with all the clinical content filled in. You write the patient's name yourself on the printed copy. Simple, private, done.
+          <strong>The result:</strong> a complete, compelling form with all the clinical content filled in. Patient details are added at the very end, sent to our servers only to fill your PDF, then discarded. They are never sent to the AI. Simple, private, done.
         </div>
       </div>
 
@@ -1047,10 +1046,10 @@
     <div class="library-top">
       <div>
         <span class="eyebrow" style="color:var(--coral)">Form library</span>
-        <h2 class="library-h2 fu">Every form. Every insurer.<br>Every specialty.</h2>
+        <h2 class="library-h2 fu">Insurance. Government.<br>Drug access.</h2>
       </div>
       <div class="fu" style="text-align:right">
-        <div class="lib-count">300+<span>forms and growing</span></div>
+        <div class="lib-count">Growing<span>new forms added regularly</span></div>
       </div>
     </div>
 
@@ -1085,7 +1084,7 @@
     </div>
 
     <div class="insurer-section fu">
-      <div class="insurer-label">All major Canadian insurers covered</div>
+      <div class="insurer-label">Canadian insurers</div>
       <div class="insurer-pills">
         <span class="ipill">Manulife</span>
         <span class="ipill">Sun Life</span>
@@ -1112,7 +1111,7 @@
       <div class="fu">
         <h2 class="pricing-h2">Built for how physicians actually work.</h2>
         <p class="pricing-sub">
-          No enterprise contract. No per-seat minimum. A small base fee, then pay only for what you use. Groups of any size are welcome.
+          No enterprise contract. No per-seat minimum. Start with 5 free forms, then choose a monthly plan or pay per form. Groups of any size are welcome.
         </p>
         <div class="roi">
           <div class="roi-title">The math — a typical month</div>
@@ -1127,18 +1126,18 @@
         <div class="plan-card">
           <div class="plan-name">Physician · Founding Access</div>
           <div class="plan-price">
-            <span class="price-big">Simple usage-based pricing</span>
+            <span class="price-big">Simple, flexible pricing</span>
           </div>
-          <div class="price-form">A small base fee, then pay only per form completed. <strong>Founding members lock in launch rates.</strong></div>
+          <div class="price-form">Start with 5 free forms, then choose a monthly plan or pay per form. <strong>Founding members lock in launch rates.</strong></div>
           <div class="plan-div"></div>
           <div class="plan-feats">
-            <div class="plan-feat">300+ forms across 20 specialties</div>
-            <div class="plan-feat">All major Canadian insurers</div>
+            <div class="plan-feat">A growing library of insurance, government and drug-access forms</div>
+            <div class="plan-feat">New forms added regularly</div>
             <div class="plan-feat">Provider directory shared with your group</div>
             <div class="plan-feat">Real trial citations, not generic text</div>
             <div class="plan-feat">Download the actual government or insurer PDF, pre-filled</div>
-            <div class="plan-feat">Patient PHI never touches the AI</div>
-            <div class="plan-feat">PHI-secured data handling, adhering to HIPAA and PHIPA standards. Your notes never train any AI model.</div>
+            <div class="plan-feat">Designed so patient identifiers never reach the AI</div>
+            <div class="plan-feat">Built for Canadian health privacy law: our servers and database are in Canada, and our AI provider keeps nothing after replying. Your notes never train any AI model.</div>
             <div class="plan-feat">Launch pricing locked in for founding members</div>
           </div>
           <a href="#early-access" class="plan-btn">Join early access</a>
@@ -1171,16 +1170,16 @@
     <form class="join-form fu" onsubmit="handleSubmit(event)" novalidate>
       <input type="text" class="email-in wide" placeholder="Full name, as registered" aria-label="Full name, as registered with your college" required autocomplete="name" maxlength="120" id="nameIn">
       <input type="email" class="email-in wide" placeholder="your@email.ca" aria-label="Email" required autocomplete="email" maxlength="254" id="emailIn">
-      <select class="email-in" aria-label="Province or territory of practice" required id="provIn">
+      <select class="email-in" aria-label="Province of practice" required id="provIn">
         <option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option>
         <option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option>
-        <option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected>Ontario</option>
-        <option value="PE">Prince Edward Island</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option>
+        <option value="ON" selected>Ontario</option><option value="SK">Saskatchewan</option>
       </select>
       <input type="text" class="email-in" placeholder="CPSO number" aria-label="CPSO number" required maxlength="30" inputmode="numeric" id="regIn">
       <input type="text" class="email-in wide" placeholder="Specialty (e.g. Medical Oncology)" aria-label="Specialty" maxlength="80" id="specIn">
       <button type="submit" class="email-btn wide">Join waitlist</button>
-      <p class="join-why">forMaD is for licensed physicians. We check your name and number against your college's public register before giving access. forMaD is not yet available to physicians practising in Quebec.</p>
+      <p class="join-why">forMaD is for licensed physicians. We check your name and number against your college's public register before giving access. forMaD is not yet available to physicians practising in Quebec, Prince Edward Island or the territories.</p>
+      <p class="join-why">We use these details only to verify your licence and contact you about access. See our <a href="/privacy" style="color:var(--coral)">Privacy Policy</a>.</p>
     </form>
     <div class="cta-note" id="submitMsg" role="status" aria-live="polite">No spam. Just a note when you are in.</div>
   </div>
@@ -1219,8 +1218,8 @@
         <h4>Company</h4>
         <a href="mailto:hello@formad.ca">Contact</a>
         <a href="mailto:hello@formad.ca">Partnership</a>
-        <a href="#">Privacy policy</a>
-        <a href="#">Terms of use</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
       </div>
       <div class="footer-col">
         <h4>Specialties</h4>
@@ -1234,7 +1233,7 @@
 
   <div class="footer-bottom">
     <div class="footer-legal">
-      forMaD is a personal productivity tool for physicians. Not owned by any healthcare organization, hospital, or insurer. AI-generated content must be reviewed and verified by the treating physician before submission. The treating physician remains solely responsible for the accuracy of submitted documentation. Patient identifying information is never processed by our AI. Notes are handled in a PHI-secured environment, adhering to HIPAA and PHIPA standards, and are not used to train AI models.
+      forMaD is a personal productivity tool for physicians. Not owned by any healthcare organization, hospital, or insurer. AI-generated content must be reviewed and verified by the treating physician before submission. The treating physician remains solely responsible for the accuracy of submitted documentation. forMaD is designed so patient identifying information never reaches the AI. Built for Canadian health privacy law: our servers and database are in Canada, and our AI provider keeps nothing after replying. Notes are not used to train AI models.
     </div>
     <div class="footer-corp">© 2026 for<em class="wm">M</em>a<em class="wm">D</em> Health Inc.</div>
   </div>
