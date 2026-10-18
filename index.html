@@ -1175,12 +1175,12 @@
         <option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option>
         <option value="NB">New Brunswick</option><option value="NL">Newfoundland and Labrador</option><option value="NS">Nova Scotia</option>
         <option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON" selected>Ontario</option>
-        <option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option>
+        <option value="PE">Prince Edward Island</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option>
       </select>
       <input type="text" class="email-in" placeholder="CPSO number" aria-label="CPSO number" required maxlength="30" inputmode="numeric" id="regIn">
       <input type="text" class="email-in wide" placeholder="Specialty (e.g. Medical Oncology)" aria-label="Specialty" maxlength="80" id="specIn">
       <button type="submit" class="email-btn wide">Join waitlist</button>
-      <p class="join-why">forMaD is for licensed physicians. We check your name and number against your college's public register before giving access.</p>
+      <p class="join-why">forMaD is for licensed physicians. We check your name and number against your college's public register before giving access. forMaD is not yet available to physicians practising in Quebec.</p>
     </form>
     <div class="cta-note" id="submitMsg" role="status" aria-live="polite">No spam. Just a note when you are in.</div>
   </div>
@@ -1258,7 +1258,7 @@
   const provIn = document.getElementById('provIn');
   const regIn = document.getElementById('regIn');
   function setRegLabel() {
-    const label = provIn.value === 'ON' ? 'CPSO number' : provIn.value === 'QC' ? 'CMQ licence number' : 'College registration number';
+    const label = provIn.value === 'ON' ? 'CPSO number' : 'College registration number';
     regIn.placeholder = label;
     regIn.setAttribute('aria-label', label);
   }
