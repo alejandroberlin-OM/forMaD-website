@@ -771,7 +771,7 @@
 </tr>
 <tr>
 <td>GitHub, Inc. (GitHub Pages)</td>
-<td>Hosts our website, formad.ca</td>
+<td>Hosts our website, formad.ca, and stores our source code and blank form templates (no personal information)</td>
 <td>Website visitors' IP address and browser details</td>
 <td>United States</td>
 </tr>
@@ -826,7 +826,7 @@
 </tr>
 <tr>
 <td>Delegate records and activity log</td>
-<td>While the account is open and for 2 years after access ends, so the Physician can review who acted for them</td>
+<td>Delegate links: while the account is open and for 2 years after access ends. Activity log entries: 2 years after each entry, so the Physician can review who acted for them</td>
 </tr>
 <tr>
 <td>Usage and AI-metering records</td>
@@ -834,7 +834,7 @@
 </tr>
 <tr>
 <td>Invoice records held for the physician</td>
-<td>While the account is open, then returned or destroyed under Schedule A of our Terms</td>
+<td>While the account is open, then returned or destroyed under Schedule A of our Terms; after deletion we keep only each invoice's number, dates, amount and status, without patient, payer or form details, with our fee records</td>
 </tr>
 <tr>
 <td>Our own plan, billing and fee records</td>
@@ -842,15 +842,19 @@
 </tr>
 <tr>
 <td>Record of your acceptance of the Terms</td>
-<td>7 years after your account closes</td>
+<td>While your account is open; after it is deleted, until 7 years after the end of the year it was recorded</td>
 </tr>
 <tr>
 <td>Record of forMaD staff opening information in your account (who, when, why; never the content)</td>
 <td>7 years</td>
 </tr>
 <tr>
+<td>Record of corrections forMaD made to your details at your request (which fields, when, why)</td>
+<td>7 years</td>
+</tr>
+<tr>
 <td>Feedback and form requests (including uploaded PDFs)</td>
-<td>Up to 3 years, then deleted, or anonymized so that there is no serious possibility of identifying anyone</td>
+<td>Up to 3 years from when they were sent, then deleted, or anonymized so that there is no serious possibility of identifying anyone</td>
 </tr>
 <tr>
 <td>Waitlist sign-ups</td>
@@ -869,12 +873,12 @@
 <p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-8-h" class="doc-sec" id="section-8"><h2 id="section-8-h">8. How we protect information, and what happens if something goes wrong</h2>
 <p><strong>Safeguards.</strong> We use administrative, technical and physical safeguards suited to the sensitivity of health information, including:</p>
 <ul>
-<li><p>sign-in by single-use codes that expire after 10 minutes and lock after repeated wrong attempts; an optional second sign-in step with an authenticator app, required once Quality Records or online payments are turned on (its secret is stored encrypted and its recovery codes in hashed form); codes and session tokens stored only in hashed form; session cookies that scripts cannot read and that travel only over encrypted connections;</p></li>
+<li><p>sign-in by single-use codes that expire after 10 minutes and lock after repeated wrong attempts; an optional second sign-in step with an authenticator app, required once Quality Records or online payments are turned on (existing accounts may postpone setting it up once, for 7 days; its secret is stored encrypted and its recovery codes in hashed form); codes and session tokens stored only in hashed form; session cookies that scripts cannot read and that travel only over encrypted connections;</p></li>
 <li><p>encryption in transit for all connections, and encryption at rest by our database provider;</p></li>
 <li><p>a database locked so that only our servers' credentials can read or write it, with every request checked against the account's permissions and any Delegate authorization;</p></li>
 <li><p>an identifier check on the notes box before clinical notes are sent for drafting, and automated removal of identifiers before Quality Records are kept;</p></li>
 <li><p>servers designed not to store or log clinical notes or Patient Details passing through them;</p></li>
-<li><p>an in-app administrative console limited to named forMaD staff and contractors bound by confidentiality, who see account, verification and usage information, feedback, and form requests with their uploaded blank forms, but not Draft contents, Quality Records or invoice details;</p></li>
+<li><p>an in-app administrative console limited to named forMaD staff and contractors bound by confidentiality, who see account, verification and usage information, feedback, form requests with their uploaded blank forms, and, for forMaD's fees, each invoice's amount, dates and status, but not Draft contents, Quality Records, or patient or payer details. At a Physician's request, staff can set up their account, correct their profile details (each correction is logged and the Physician is emailed), and reset their two-step sign-in after confirming who they are;</p></li>
 <li><p>technical access to our database, hosting and payment accounts limited to a small number of named staff for operations, with access to Drafts and Quality Records restricted and logged;</p></li>
 <li><p>confidentiality obligations and privacy training for everyone who works for us; and</p></li>
 <li><p>written agreements with service providers requiring them to protect information.</p></li>
@@ -919,6 +923,11 @@
 <td>7 days, or until you sign out</td>
 </tr>
 <tr>
+<td>formad_device cookie</td>
+<td>Remembers a device you chose to trust for two-step sign-in, so you are not asked for a code on it. Secure and not readable by scripts.</td>
+<td>30 days, or until you remove the device</td>
+</tr>
+<tr>
 <td>Acting-for setting (browser storage)</td>
 <td>Remembers which Physician a Delegate is working for</td>
 <td>Until changed or cleared</td>
@@ -937,7 +946,7 @@
 </table></div>
 <p>The app and our website serve their own fonts, so loading a page does not send your IP address to Google or another font provider. When you pay or set up payments, Stripe's own pages may set Stripe's cookies under Stripe's privacy policy.</p>
 <p><strong>On shared computers,</strong> sign out when you finish and clear the browser's stored data, because file references stay on the device.</p>
-<p><strong>Emails.</strong> We send service emails: sign-in codes; Delegate invitations, and account invitations when you ask us to set up your account, that identify forMaD and the inviting Physician; forMaD fee statements and payment notices; and confirmation when a closed account's data has been deleted. Stripe sends plan receipts and invoices. We do not send marketing emails. If we start, we will ask for your consent first, and every message will include a way to unsubscribe, as Canada's anti-spam law requires.</p>
+<p><strong>Emails.</strong> We send service emails: sign-in codes; Delegate invitations, and account invitations when you ask us to set up your account, that identify forMaD and the inviting Physician; forMaD fee statements and payment notices; notices of corrections we made to your details at your request; and confirmation when a closed account's data has been deleted. Stripe sends plan receipts and invoices. We do not send marketing emails. If we start, we will ask for your consent first, and every message will include a way to unsubscribe, as Canada's anti-spam law requires.</p>
 <p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-12-h" class="doc-sec" id="section-12"><h2 id="section-12-h">12. Changes, contact and complaints</h2>
 <p><strong>Changes to this policy.</strong> We will post any change here with a new effective date. If a change is material, for example a new purpose, a new category of service provider receiving health information, or a new country where information is stored, we will tell you by email or in the app at least 30 days before it takes effect, and ask for your consent again where the law requires.</p>
 <p><strong>Privacy Officer.</strong> Our Privacy Officer is accountable for our compliance with this policy and with privacy law.</p>
