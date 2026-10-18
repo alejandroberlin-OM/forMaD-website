@@ -509,7 +509,7 @@
 <tbody>
 <tr>
 <td>Account</td>
-<td>Email address; account status; date of last sign-in; records of what you accepted, the version and when. Sign-in codes and session tokens are stored only in scrambled (hashed) form.</td>
+<td>Email address; account status; date of last sign-in; records of what you accepted, the version and when; two-step sign-in settings and the devices you chose to remember. Sign-in codes and session tokens are stored only in scrambled (hashed) form.</td>
 <td>You</td>
 </tr>
 <tr>
@@ -818,11 +818,11 @@
 </tr>
 <tr>
 <td>Account and Profiles</td>
-<td>While your account is open, then deleted within 90 days after it closes</td>
+<td>While your account is open. If you close it, it stays readable for 30 days so you can download your data or reopen it; then it is deleted and we email you a confirmation.</td>
 </tr>
 <tr>
 <td>Sign-in codes and sessions</td>
-<td>Codes expire after 10 minutes and sessions after 7 days; expired ones are deleted within 30 days</td>
+<td>Codes expire after 10 minutes and sessions after 7 days; expired ones are deleted within 30 days. Devices remembered for two-step sign-in expire after 30 days and are then deleted.</td>
 </tr>
 <tr>
 <td>Delegate records and activity log</td>
@@ -838,11 +838,15 @@
 </tr>
 <tr>
 <td>Our own plan, billing and fee records</td>
-<td>7 years after the end of the year they relate to, as tax law requires</td>
+<td>7 years after the end of the year they relate to, as tax law requires. If an account is deleted, its fee records keep the physician's name and email for 7 years so we can show who was billed.</td>
 </tr>
 <tr>
 <td>Record of your acceptance of the Terms</td>
 <td>7 years after your account closes</td>
+</tr>
+<tr>
+<td>Record of forMaD staff opening information in your account (who, when, why; never the content)</td>
+<td>7 years</td>
 </tr>
 <tr>
 <td>Feedback and form requests (including uploaded PDFs)</td>
@@ -865,7 +869,7 @@
 <p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-8-h" class="doc-sec" id="section-8"><h2 id="section-8-h">8. How we protect information, and what happens if something goes wrong</h2>
 <p><strong>Safeguards.</strong> We use administrative, technical and physical safeguards suited to the sensitivity of health information, including:</p>
 <ul>
-<li><p>sign-in by single-use codes that expire after 10 minutes and lock after repeated wrong attempts; codes and session tokens stored only in hashed form; session cookies that scripts cannot read and that travel only over encrypted connections;</p></li>
+<li><p>sign-in by single-use codes that expire after 10 minutes and lock after repeated wrong attempts; an optional second sign-in step with an authenticator app, required once Quality Records or online payments are turned on (its secret is stored encrypted and its recovery codes in hashed form); codes and session tokens stored only in hashed form; session cookies that scripts cannot read and that travel only over encrypted connections;</p></li>
 <li><p>encryption in transit for all connections, and encryption at rest by our database provider;</p></li>
 <li><p>a database locked so that only our servers' credentials can read or write it, with every request checked against the account's permissions and any Delegate authorization;</p></li>
 <li><p>an identifier check on the notes box before clinical notes are sent for drafting, and automated removal of identifiers before Quality Records are kept;</p></li>
@@ -933,7 +937,7 @@
 </table></div>
 <p>The app and our website serve their own fonts, so loading a page does not send your IP address to Google or another font provider. When you pay or set up payments, Stripe's own pages may set Stripe's cookies under Stripe's privacy policy.</p>
 <p><strong>On shared computers,</strong> sign out when you finish and clear the browser's stored data, because file references stay on the device.</p>
-<p><strong>Emails.</strong> We send service emails: sign-in codes, and Delegate invitations that identify forMaD and the inviting Physician. Stripe sends plan receipts and invoices. We do not send marketing emails. If we start, we will ask for your consent first, and every message will include a way to unsubscribe, as Canada's anti-spam law requires.</p>
+<p><strong>Emails.</strong> We send service emails: sign-in codes; Delegate invitations, and account invitations when you ask us to set up your account, that identify forMaD and the inviting Physician; forMaD fee statements and payment notices; and confirmation when a closed account's data has been deleted. Stripe sends plan receipts and invoices. We do not send marketing emails. If we start, we will ask for your consent first, and every message will include a way to unsubscribe, as Canada's anti-spam law requires.</p>
 <p class="to-top"><a href="#top">Back to top</a></p></section><section aria-labelledby="section-12-h" class="doc-sec" id="section-12"><h2 id="section-12-h">12. Changes, contact and complaints</h2>
 <p><strong>Changes to this policy.</strong> We will post any change here with a new effective date. If a change is material, for example a new purpose, a new category of service provider receiving health information, or a new country where information is stored, we will tell you by email or in the app at least 30 days before it takes effect, and ask for your consent again where the law requires.</p>
 <p><strong>Privacy Officer.</strong> Our Privacy Officer is accountable for our compliance with this policy and with privacy law.</p>
